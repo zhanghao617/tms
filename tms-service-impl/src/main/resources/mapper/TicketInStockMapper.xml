@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haoyukeji.tms.mapper.TicketInStockMapper">
+  <resultMap id="BaseResultMap" type="com.haoyukeji.tms.entity.TicketInStock">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="in_stock_name" jdbcType="VARCHAR" property="inStockName" />
+    <result column="in_stock_num" jdbcType="VARCHAR" property="inStockNum" />
+    <result column="in_stock_sum" jdbcType="VARCHAR" property="inStockSum" />
+    <result column="in_stock_start" jdbcType="VARCHAR" property="inStockStart" />
+    <result column="in_stock_end" jdbcType="VARCHAR" property="inStockEnd" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="ticket_in_stock_state" jdbcType="VARCHAR" property="ticketInStockState" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, in_stock_name, in_stock_num, in_stock_sum, in_stock_start, in_stock_end, create_time, 
+    update_time, ticket_in_stock_state
+  </sql>
+  <select id="selectByExample" parameterType="com.haoyukeji.tms.entity.TicketInStockExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ticket_in_stock
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ticket_in_stock
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ticket_in_stock
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.haoyukeji.tms.entity.TicketInStockExample">
+    delete from ticket_in_stock
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.haoyukeji.tms.entity.TicketInStock">
+    insert into ticket_in_stock (id, in_stock_name, in_stock_num, 
+      in_stock_sum, in_stock_start, in_stock_end, 
+      create_time, update_time, ticket_in_stock_state
+      )
+    values (#{id,jdbcType=INTEGER}, #{inStockName,jdbcType=VARCHAR}, #{inStockNum,jdbcType=VARCHAR}, 
+      #{inStockSum,jdbcType=VARCHAR}, #{inStockStart,jdbcType=VARCHAR}, #{inStockEnd,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{ticketInStockState,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.haoyukeji.tms.entity.TicketInStock">
+    insert into ticket_in_stock
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="inStockName != null">
+        in_stock_name,
+      </if>
+      <if test="inStockNum != null">
+        in_stock_num,
+      </if>
+      <if test="inStockSum != null">
+        in_stock_sum,
+      </if>
+      <if test="inStockStart != null">
+        in_stock_start,
+      </if>
+      <if test="inStockEnd != null">
+        in_stock_end,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="ticketInStockState != null">
+        ticket_in_stock_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="inStockName != null">
+        #{inStockName,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockNum != null">
+        #{inStockNum,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockSum != null">
+        #{inStockSum,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockStart != null">
+        #{inStockStart,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockEnd != null">
+        #{inStockEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ticketInStockState != null">
+        #{ticketInStockState,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.haoyukeji.tms.entity.TicketInStockExample" resultType="java.lang.Long">
+    select count(*) from ticket_in_stock
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update ticket_in_stock
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.inStockName != null">
+        in_stock_name = #{record.inStockName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inStockNum != null">
+        in_stock_num = #{record.inStockNum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inStockSum != null">
+        in_stock_sum = #{record.inStockSum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inStockStart != null">
+        in_stock_start = #{record.inStockStart,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inStockEnd != null">
+        in_stock_end = #{record.inStockEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.ticketInStockState != null">
+        ticket_in_stock_state = #{record.ticketInStockState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update ticket_in_stock
+    set id = #{record.id,jdbcType=INTEGER},
+      in_stock_name = #{record.inStockName,jdbcType=VARCHAR},
+      in_stock_num = #{record.inStockNum,jdbcType=VARCHAR},
+      in_stock_sum = #{record.inStockSum,jdbcType=VARCHAR},
+      in_stock_start = #{record.inStockStart,jdbcType=VARCHAR},
+      in_stock_end = #{record.inStockEnd,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      ticket_in_stock_state = #{record.ticketInStockState,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.haoyukeji.tms.entity.TicketInStock">
+    update ticket_in_stock
+    <set>
+      <if test="inStockName != null">
+        in_stock_name = #{inStockName,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockNum != null">
+        in_stock_num = #{inStockNum,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockSum != null">
+        in_stock_sum = #{inStockSum,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockStart != null">
+        in_stock_start = #{inStockStart,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockEnd != null">
+        in_stock_end = #{inStockEnd,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ticketInStockState != null">
+        ticket_in_stock_state = #{ticketInStockState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.haoyukeji.tms.entity.TicketInStock">
+    update ticket_in_stock
+    set in_stock_name = #{inStockName,jdbcType=VARCHAR},
+      in_stock_num = #{inStockNum,jdbcType=VARCHAR},
+      in_stock_sum = #{inStockSum,jdbcType=VARCHAR},
+      in_stock_start = #{inStockStart,jdbcType=VARCHAR},
+      in_stock_end = #{inStockEnd,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      ticket_in_stock_state = #{ticketInStockState,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,7 @@
+com\haoyukeji\tms\controller\exception\NotFoundException.class
+com\haoyukeji\tms\controller\PermissionController.class
+com\haoyukeji\tms\shiro\ShiroRealm.class
+com\haoyukeji\tms\controller\StoreController.class
+com\haoyukeji\tms\controller\RoleController.class
+com\haoyukeji\tms\controller\LoginController.class
+com\haoyukeji\tms\controller\AccountController.class

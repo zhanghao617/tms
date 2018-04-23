@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haoyukeji.tms.mapper.StoreAccountMapper">
+  <resultMap id="BaseResultMap" type="com.haoyukeji.tms.entity.StoreAccount">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="store_account_name" jdbcType="VARCHAR" property="storeAccountName" />
+    <result column="store_account_mobile" jdbcType="VARCHAR" property="storeAccountMobile" />
+    <result column="store_account_password" jdbcType="VARCHAR" property="storeAccountPassword" />
+    <result column="store_account_create_time" jdbcType="TIMESTAMP" property="storeAccountCreateTime" />
+    <result column="store_account_update_time" jdbcType="TIMESTAMP" property="storeAccountUpdateTime" />
+    <result column="store_account_state" jdbcType="VARCHAR" property="storeAccountState" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, store_account_name, store_account_mobile, store_account_password, store_account_create_time, 
+    store_account_update_time, store_account_state
+  </sql>
+  <select id="selectByExample" parameterType="com.haoyukeji.tms.entity.StoreAccountExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from store_account
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from store_account
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from store_account
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.haoyukeji.tms.entity.StoreAccountExample">
+    delete from store_account
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.haoyukeji.tms.entity.StoreAccount">
+    insert into store_account (id, store_account_name, store_account_mobile, 
+      store_account_password, store_account_create_time, 
+      store_account_update_time, store_account_state
+      )
+    values (#{id,jdbcType=INTEGER}, #{storeAccountName,jdbcType=VARCHAR}, #{storeAccountMobile,jdbcType=VARCHAR}, 
+      #{storeAccountPassword,jdbcType=VARCHAR}, #{storeAccountCreateTime,jdbcType=TIMESTAMP}, 
+      #{storeAccountUpdateTime,jdbcType=TIMESTAMP}, #{storeAccountState,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.haoyukeji.tms.entity.StoreAccount">
+    insert into store_account
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="storeAccountName != null">
+        store_account_name,
+      </if>
+      <if test="storeAccountMobile != null">
+        store_account_mobile,
+      </if>
+      <if test="storeAccountPassword != null">
+        store_account_password,
+      </if>
+      <if test="storeAccountCreateTime != null">
+        store_account_create_time,
+      </if>
+      <if test="storeAccountUpdateTime != null">
+        store_account_update_time,
+      </if>
+      <if test="storeAccountState != null">
+        store_account_state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="storeAccountName != null">
+        #{storeAccountName,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAccountMobile != null">
+        #{storeAccountMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAccountPassword != null">
+        #{storeAccountPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAccountCreateTime != null">
+        #{storeAccountCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeAccountUpdateTime != null">
+        #{storeAccountUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeAccountState != null">
+        #{storeAccountState,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.haoyukeji.tms.entity.StoreAccountExample" resultType="java.lang.Long">
+    select count(*) from store_account
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update store_account
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.storeAccountName != null">
+        store_account_name = #{record.storeAccountName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.storeAccountMobile != null">
+        store_account_mobile = #{record.storeAccountMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.storeAccountPassword != null">
+        store_account_password = #{record.storeAccountPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.storeAccountCreateTime != null">
+        store_account_create_time = #{record.storeAccountCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.storeAccountUpdateTime != null">
+        store_account_update_time = #{record.storeAccountUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.storeAccountState != null">
+        store_account_state = #{record.storeAccountState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update store_account
+    set id = #{record.id,jdbcType=INTEGER},
+      store_account_name = #{record.storeAccountName,jdbcType=VARCHAR},
+      store_account_mobile = #{record.storeAccountMobile,jdbcType=VARCHAR},
+      store_account_password = #{record.storeAccountPassword,jdbcType=VARCHAR},
+      store_account_create_time = #{record.storeAccountCreateTime,jdbcType=TIMESTAMP},
+      store_account_update_time = #{record.storeAccountUpdateTime,jdbcType=TIMESTAMP},
+      store_account_state = #{record.storeAccountState,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.haoyukeji.tms.entity.StoreAccount">
+    update store_account
+    <set>
+      <if test="storeAccountName != null">
+        store_account_name = #{storeAccountName,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAccountMobile != null">
+        store_account_mobile = #{storeAccountMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAccountPassword != null">
+        store_account_password = #{storeAccountPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="storeAccountCreateTime != null">
+        store_account_create_time = #{storeAccountCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeAccountUpdateTime != null">
+        store_account_update_time = #{storeAccountUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="storeAccountState != null">
+        store_account_state = #{storeAccountState,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.haoyukeji.tms.entity.StoreAccount">
+    update store_account
+    set store_account_name = #{storeAccountName,jdbcType=VARCHAR},
+      store_account_mobile = #{storeAccountMobile,jdbcType=VARCHAR},
+      store_account_password = #{storeAccountPassword,jdbcType=VARCHAR},
+      store_account_create_time = #{storeAccountCreateTime,jdbcType=TIMESTAMP},
+      store_account_update_time = #{storeAccountUpdateTime,jdbcType=TIMESTAMP},
+      store_account_state = #{storeAccountState,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
