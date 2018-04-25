@@ -2,35 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="874f2334-81cc-403b-a0d7-061d7a6ccbd7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/resources/ehcache.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/resources/log4j.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/error/401.jsp" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/entity/Store.java" afterPath="$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/entity/Store.java" />
-      <change beforePath="$PROJECT_DIR$/tms-commons/target/tms-commons-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/tms-commons/target/tms-commons-1.0-SNAPSHOT.jar" />
       <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/StoreController.java" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/StoreController.java" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/js.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/js.jsp" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/sidebar.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/sidebar.jsp" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/store/home.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/store/home.jsp" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/store/new.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/store/new.jsp" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" />
       <change beforePath="$PROJECT_DIR$/tms-manager-web/target/classes/com/haoyukeji/tms/controller/LoginController.class" afterPath="$PROJECT_DIR$/tms-manager-web/target/classes/com/haoyukeji/tms/controller/LoginController.class" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/tms-manager-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/tms-manager-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/include/sidebar_jsp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/include/sidebar_jsp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/StoreServiceImpl.java" afterPath="$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/StoreServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/tms-service-impl/src/main/resources/Log4j.properties" afterPath="$PROJECT_DIR$/tms-service-impl/src/main/resources/log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/tms-service-impl/src/main/resources/mapper/StoreAccountMapper.xml" afterPath="$PROJECT_DIR$/tms-service-impl/src/main/resources/mapper/StoreAccountMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/tms-service-impl/src/main/resources/mapper/StoreMapper.xml" afterPath="$PROJECT_DIR$/tms-service-impl/src/main/resources/mapper/StoreMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/tms-service-impl/target/classes/Log4j.properties" afterPath="$PROJECT_DIR$/tms-service-impl/target/classes/Log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/tms-service-impl/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/tms-service-impl/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java" afterPath="$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/tms-service-impl/target/classes/com/haoyukeji/tms/service/impl/AccountServiceImpl.class" afterPath="$PROJECT_DIR$/tms-service-impl/target/classes/com/haoyukeji/tms/service/impl/AccountServiceImpl.class" />
       <change beforePath="$PROJECT_DIR$/tms-service-impl/target/tms-service-impl-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/tms-service-impl/target/tms-service-impl-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/StoreService.java" afterPath="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/StoreService.java" />
-      <change beforePath="$PROJECT_DIR$/tms-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/tms-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java" afterPath="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java" />
+      <change beforePath="$PROJECT_DIR$/tms-service/target/classes/com/haoyukeji/tms/service/AccountService.class" afterPath="$PROJECT_DIR$/tms-service/target/classes/com/haoyukeji/tms/service/AccountService.class" />
       <change beforePath="$PROJECT_DIR$/tms-service/target/tms-service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/tms-service/target/tms-service-1.0-SNAPSHOT.jar" />
     </list>
     <ignored path="$PROJECT_DIR$/tms-commons/target/" />
@@ -64,14 +45,58 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="233">
+              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding>
-                <element signature="e#1041#1042#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#3189#3190#0" expanded="true" />
-                <element signature="e#3214#3215#0" expanded="true" />
+                <element signature="e#3387#3388#0" expanded="true" />
+                <element signature="e#3417#3418#0" expanded="true" />
+                <element signature="e#3756#3757#0" expanded="true" />
+                <element signature="e#3790#3791#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShiroRealm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/permission/home.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/permission/edit.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/role/edit.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/RoleController.java" />
@@ -125,14 +149,11 @@
         <option value="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/RolePermissionService.java" />
         <option value="$PROJECT_DIR$/tms-service-impl/src/main/resources/mapper/RoleMapper.xml" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/edit.jsp" />
-        <option value="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java" />
-        <option value="$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java" />
         <option value="$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/dto/ResponseBean.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/pom.xml" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/AccountController.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/PermissionController.java" />
-        <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java" />
         <option value="$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/entity/StoreAccountLog.java" />
         <option value="$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/entity/Ticket.java" />
         <option value="$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/entity/TicketInStock.java" />
@@ -165,6 +186,10 @@
         <option value="$PROJECT_DIR$/tms-service-impl/src/main/resources/Log4j.properties" />
         <option value="$PROJECT_DIR$/tms-service-impl/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java" />
+        <option value="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java" />
+        <option value="$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java" />
+        <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" />
       </list>
     </option>
@@ -194,15 +219,6 @@
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="tms-commons" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="tms-commons" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="tms-manager-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
@@ -375,6 +391,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-manager-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-manager-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
@@ -641,12 +676,12 @@
       <workItem from="1524495655217" duration="1338000" />
       <workItem from="1524529803011" duration="8610000" />
       <workItem from="1524616851932" duration="9183000" />
-      <workItem from="1524666425519" duration="262000" />
+      <workItem from="1524666425519" duration="3362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188855000" />
+    <option name="totallyTimeSpent" value="191955000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,7 +717,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.851227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6646248" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -725,7 +760,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.851227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6646248" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -750,20 +785,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/static/plugins/uploader/webuploader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/role/new.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3168">
@@ -785,17 +806,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="141" column="36" lean-forward="true" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tms-service-impl/src/main/resources/mapper/AccountMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="197" column="48" lean-forward="false" selection-start-line="197" selection-start-column="48" selection-end-line="197" selection-end-column="48" />
+          <folding>
+            <marker date="1524460005591" expanded="true" signature="3786:3889" ph="select from account" />
+            <marker date="1524460005591" expanded="true" signature="3975:4032" ph="delete from account... " />
+            <marker date="1524460005591" expanded="true" signature="4137:4156" ph="delete from account... " />
+            <marker date="1524460005591" expanded="true" signature="4337:4721" ph="insert into account... " />
+            <marker date="1524460005591" expanded="true" signature="6235:6263" ph="select count... account" />
+            <marker date="1524460005591" expanded="true" signature="6431:6812" ph="SELECT accou... account" />
+            <marker date="1524460005591" expanded="true" signature="6892:7265" ph="SELECT accou... account" />
+            <marker date="1524460005591" expanded="true" signature="8817:9254" ph="update account... " />
+            <marker date="1524460005591" expanded="true" signature="9466:10194" ph="update account... " />
+            <marker date="1524460005591" expanded="true" signature="10295:10686" ph="update account... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -817,6 +843,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -853,6 +880,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="130" column="46" lean-forward="false" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -860,6 +888,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="280" column="129" lean-forward="false" selection-start-line="280" selection-start-column="129" selection-end-line="280" selection-end-column="129" />
+          <folding>
+            <marker date="1524552063848" expanded="true" signature="4400:4501" ph="select from store" />
+            <marker date="1524552063848" expanded="true" signature="4587:4642" ph="delete from store... " />
+            <marker date="1524552063848" expanded="true" signature="4745:4762" ph="delete from store... " />
+            <marker date="1524552063848" expanded="true" signature="4941:5667" ph="insert into store... " />
+            <marker date="1524552063848" expanded="true" signature="8260:8286" ph="select count... store" />
+            <marker date="1524552063848" expanded="true" signature="10261:11096" ph="update store... " />
+            <marker date="1524552063848" expanded="true" signature="11347:12759" ph="update store... " />
+            <marker date="1524552063848" expanded="true" signature="12858:13605" ph="update store... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -874,6 +912,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="211" column="136" lean-forward="false" selection-start-line="211" selection-start-column="136" selection-end-line="211" selection-end-column="136" />
+          <folding>
+            <marker date="1524552063858" expanded="true" signature="3960:4069" ph="select from store_account" />
+            <marker date="1524552063858" expanded="true" signature="4155:4218" ph="delete from store_account... " />
+            <marker date="1524552063858" expanded="true" signature="4328:4353" ph="delete from store_account... " />
+            <marker date="1524552063858" expanded="true" signature="4539:5039" ph="insert into store_account... " />
+            <marker date="1524552063858" expanded="true" signature="6794:6828" ph="select count... store_account" />
+            <marker date="1524552063858" expanded="true" signature="8181:8720" ph="update store_account... " />
+            <marker date="1524552063858" expanded="true" signature="8978:9852" ph="update store_account... " />
+            <marker date="1524552063858" expanded="true" signature="9958:10451" ph="update store_account... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -950,6 +998,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -976,14 +1025,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/shiro.ini" />
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -1012,6 +1053,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,6 +1128,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="168" column="17" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1103,15 +1146,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+        <state relative-caret-position="233">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#3189#3190#0" expanded="true" />
-            <element signature="e#3214#3215#0" expanded="true" />
+            <element signature="e#3387#3388#0" expanded="true" />
+            <element signature="e#3417#3418#0" expanded="true" />
+            <element signature="e#3756#3757#0" expanded="true" />
+            <element signature="e#3790#3791#0" expanded="true" />
           </folding>
         </state>
       </provider>

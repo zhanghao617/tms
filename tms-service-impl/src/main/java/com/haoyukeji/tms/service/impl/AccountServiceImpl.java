@@ -35,16 +35,16 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private RoleMapper roleMapper;
 
-    /**
+/*    *//**
      * 系统登录
      * @param accountMobile 手机号
      * @param accountPassword 密码
      * @param requestIP  IP地址
      * @return  如果登陆成功，则返回Account对象，失败返回null
      * @throws ServiceException   如果登录失败，则通过异常抛出具体的错误原因
-     */
-    @Override
-    public Account login(String accountMobile, String accountPassword, String requestIP) throws ServiceException {
+     *//*
+    @Override*/
+   /* public Account login(String accountMobile, String accountPassword, String requestIP) throws ServiceException {
 
         //根据手机号查询对应账号
         AccountExample accountExample = new AccountExample();
@@ -79,7 +79,7 @@ public class AccountServiceImpl implements AccountService {
         } else {
             throw new ServiceException("账号或密码错误");
         }
-    }
+    }*/
 
     /**
      * 新增账号
@@ -211,6 +211,33 @@ public class AccountServiceImpl implements AccountService {
         accountMapper.deleteByPrimaryKey(id);
         logger.info("删除账号 {}" ,account);
 
+    }
+
+    /**
+     * 根据手机号码查新Account对象
+     *
+     * @param userMobile
+     */
+    @Override
+    public Account findByMobile(String userMobile) {
+        AccountExample accountExample = new AccountExample();
+        accountExample.createCriteria().andAccountMobileEqualTo(userMobile);
+
+        List<Account> accountList = accountMapper.selectByExample(accountExample);
+        if (accountList != null && !accountList.isEmpty()) {
+            return accountList.get(0);
+        }
+        return null;
+    }
+
+    /**
+     * 登陆日志
+     *
+     * @param accountLoginLog
+     */
+    @Override
+    public void saveAccountLoginLog(AccountLoginLog accountLoginLog) {
+        accountLoginLogMapper.insertSelective(accountLoginLog);
     }
 
 }

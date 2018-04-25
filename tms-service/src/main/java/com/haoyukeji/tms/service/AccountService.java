@@ -1,6 +1,7 @@
 package com.haoyukeji.tms.service;
 
 import com.haoyukeji.tms.entity.Account;
+import com.haoyukeji.tms.entity.AccountLoginLog;
 import com.haoyukeji.tms.entity.Role;
 import com.haoyukeji.tms.exception.ServiceException;
 
@@ -19,7 +20,7 @@ public interface AccountService {
      * @param requestIP
      * @return
      */
-    Account login(String accountMobile, String accountPassword, String requestIP) throws ServiceException;
+//    Account login(String accountMobile, String accountPassword, String requestIP) throws ServiceException;
 
     /**
      * 新增账号
@@ -65,4 +66,16 @@ public interface AccountService {
      * @param id
      */
     void delAccountById(Integer id) throws ServiceException;
+
+    /**
+     *根据手机号码查新Account对象
+     * @param userMobile
+     */
+    Account findByMobile(String userMobile);
+
+    /**
+     * 登陆日志
+     * @param accountLoginLog
+     */
+    void saveAccountLoginLog(AccountLoginLog accountLoginLog);
 }

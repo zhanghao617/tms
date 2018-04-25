@@ -30,6 +30,16 @@ public class LoginController {
 
     @GetMapping("/")
     public String login() {
+        Subject subject = SecurityUtils.getSubject();
+
+        //判断是否认证，false退出
+        if(subject.isAuthenticated()) {
+            subject.logout();
+        }
+        //判断是否被记住，ture跳转home页，false：登陆页
+        if (subject.isRemembered()) {
+            return "redirect:/home";
+        }
         return "login";
     }
 
@@ -87,7 +97,16 @@ public class LoginController {
     }
 
     @GetMapping("/logout")
-    public String logout() {
-        return "";
+    public String logout(RedirectAttributes redirectAttributes) {
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+
+        redirectAttributes.addFlashAttribute("message","你已安全退出");
+        return "redirect:/";
+    }
+
+    @GetMapping("/401")
+    public String unauthorizedUrl() {
+        return "error/401";
     }
 }
