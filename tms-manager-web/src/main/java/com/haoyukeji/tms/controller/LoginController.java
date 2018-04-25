@@ -96,14 +96,14 @@ public class LoginController {
         return "/home";
     }
 
-    @GetMapping("/logout")
+    /*@GetMapping("/logout")
     public String logout(RedirectAttributes redirectAttributes) {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
 
         redirectAttributes.addFlashAttribute("message","你已安全退出");
         return "redirect:/";
-    }
+    }*/
 
     @GetMapping("/401")
     public String unauthorizedUrl() {

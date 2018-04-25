@@ -44,6 +44,7 @@
             <value>
                 /favicon.ico = anon
                 /static/** = anon
+                /logout = logout
                 /** = authc
             </value>
         </property>
