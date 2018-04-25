@@ -29,7 +29,7 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">系统功能</li>
-            <li class="${param.menu == '' ? 'active' : ''}">
+            <li class="${param.menu == 'ticket_store' ? 'active' : ''}">
                 <a href="/store">
                     <i class="fa fa-circle-o"></i> <span>售票点信息</span>
                     <span class="pull-right-container">

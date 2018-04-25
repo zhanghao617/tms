@@ -23,10 +23,10 @@
     </filter-mapping>
 
     <!--Shiro 过滤器-->
-   <!-- <filter>
+    <filter>
         <filter-name>shiroFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-        &lt;!&ndash; 设置true由servlet容器控制filter的生命周期 &ndash;&gt;
+        <!-- 设置true由servlet容器控制filter的生命周期 -->
         <init-param>
             <param-name>targetFilterLifecycle</param-name>
             <param-value>true</param-value>
@@ -36,7 +36,7 @@
     <filter-mapping>
         <filter-name>shiroFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>-->
+    </filter-mapping>
 
 
     <!--配置中央控制器-->

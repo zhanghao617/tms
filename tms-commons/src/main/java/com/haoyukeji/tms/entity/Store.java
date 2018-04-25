@@ -64,6 +64,11 @@ public class Store implements Serializable {
      */
     private Date storeCreateTime;
 
+    /**
+     * 修改时间
+     */
+    private Date storeUpdateTime;
+
     private Integer storeAccountId;
 
     private static final long serialVersionUID = 1L;
@@ -170,5 +175,13 @@ public class Store implements Serializable {
 
     public void setStoreAccountId(Integer storeAccountId) {
         this.storeAccountId = storeAccountId;
+    }
+
+    public Date getStoreUpdateTime() {
+        return storeUpdateTime;
+    }
+
+    public void setStoreUpdateTime(Date storeUpdateTime) {
+        this.storeUpdateTime = storeUpdateTime;
     }
 }

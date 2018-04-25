@@ -49,32 +49,34 @@
                 </div>
                 <div class="box-body">
                     <form method="post" id="saveForm">
-                        <input type="hidden" id="storeIdcardFront" name="storeIdcardFront">
-                        <input type="hidden" id="storeProof" name="storeProof">
+                        <input type="hidden" name="id" value="${store.id}">
+                        <input type="hidden" id="storeIdcardFront" name="storeIdcardFront" value="${store.storeIdcardFront}">
+                        <input type="hidden" id="storeProof" name="storeProof" value="${store.storeProof}">
+                        <input type="hidden" name="storeAccountId" value="${store.storeAccountId}">
                         <div class="form-group">
                             <label>售票点名称</label>
-                            <input type="text" name="storeName" class="form-control">
+                            <input type="text" name="storeName" value="${store.storeName}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>电话</label>
-                            <input type="text" name="storeMobile" class="form-control">
+                            <input type="text" name="storeMobile" value="${store.storeMobile}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>法人</label>
-                            <input type="text" name="storeAdmin" class="form-control">
+                            <input type="text" name="storeAdmin" value="${store.storeAdmin}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>地址</label>
-                            <input type="text" name="storeAddress" class="form-control">
+                            <input type="text" name="storeAddress" value="${store.storeAddress}" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div id="picker">选择联系人身份证照片</div>
-                                <div class="photo" id="adminPhoto"></div>
+                                <div class="photo" id="adminPhoto"><img src="http://p7mbomeo6.bkt.clouddn.com/${store.storeIdcardFront}-preview" alt=""></div>
                             </div>
                             <div class="col-md-6">
                                 <div id="picker2">选择营业执照照片</div>
-                                <div class="photo" id="storePhoto"></div>
+                                <div class="photo" id="storePhoto"><img src="http://p7mbomeo6.bkt.clouddn.com/${store.storeProof}-preview" alt=""></div>
                             </div>
                         </div>
                     </form>
@@ -142,7 +144,7 @@
         });
 
         // 初始化Web Uploader
-        var uploader2 = WebUploader.create({
+        var uploader = WebUploader.create({
             // 选完文件后，是否自动上传。
             auto: true,
             // swf文件路径
@@ -163,10 +165,11 @@
                 mimeTypes: 'image/*'
             }
         });
-        uploader2.on( 'uploadStart', function( file ) {
+        var index = -1;
+        uploader.on( 'uploadStart', function( file ) {
             index = layer.load(1);
         });
-        uploader2.on( 'uploadSuccess', function( file,response ) {
+        uploader.on( 'uploadSuccess', function( file,response ) {
             $("#storePhoto").html("");
             var fileName = response.key;
             var $img = $("<img>").attr("src","http://p7mbomeo6.bkt.clouddn.com/"+fileName+"-preview");
@@ -175,10 +178,10 @@
             $("#storeProof").val(fileName);
             layer.msg("上传成功");
         });
-        uploader2.on( 'uploadError', function( file ) {
+        uploader.on( 'uploadError', function( file ) {
             layer.msg("服务器异常");
         });
-        uploader2.on( 'uploadComplete', function( file ) {
+        uploader.on( 'uploadComplete', function( file ) {
             layer.close(index);
         });
     })

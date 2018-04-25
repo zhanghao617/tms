@@ -121,7 +121,7 @@
       #{storeLongitude,jdbcType=VARCHAR}, #{storeLatitude,jdbcType=VARCHAR}, #{storeState,jdbcType=VARCHAR}, 
       #{storeCreateTime,jdbcType=TIMESTAMP}, #{storeAccountId,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.haoyukeji.tms.entity.Store">
+  <insert id="insertSelective" parameterType="com.haoyukeji.tms.entity.Store" useGeneratedKeys="true" keyProperty="id">
     insert into store
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -278,7 +278,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.haoyukeji.tms.entity.Store">
+  <update id="updateByPrimaryKeySelective" parameterType="com.haoyukeji.tms.entity.Store" useGeneratedKeys="true" keyProperty="id">
     update store
     <set>
       <if test="storeName != null">

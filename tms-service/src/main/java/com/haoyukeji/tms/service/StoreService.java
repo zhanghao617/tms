@@ -2,6 +2,8 @@ package com.haoyukeji.tms.service;
 
 import com.haoyukeji.tms.entity.Store;
 
+import java.util.List;
+
 public interface StoreService {
 
     /**
@@ -9,4 +11,27 @@ public interface StoreService {
      * @param store
      */
     void saveNewStore(Store store);
+
+    /**
+     * 查询所有的销售点
+     */
+    List<Store> findAllStore();
+
+    /**
+     * 根据售票点id查询售票点信息以及售票点账户信息
+     * @param id
+     */
+    Store findStoreById(Integer id);
+
+    /**
+     * 修改售票点信息
+     * @param store
+     */
+    void updateStore(Store store);
+
+    /**
+     * 删除售票点以及售票点账号
+     * @param id
+     */
+    void delStoreWithAccountById(Integer id);
 }

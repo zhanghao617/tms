@@ -3,5 +3,6 @@ E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\java\com\haoyukeji\tm
 E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\java\com\haoyukeji\tms\controller\StoreController.java
 E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\java\com\haoyukeji\tms\controller\PermissionController.java
 E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\java\com\haoyukeji\tms\controller\RoleController.java
+E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\java\com\haoyukeji\tms\shiro\CustomerFilterChainDefinition.java
 E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\java\com\haoyukeji\tms\shiro\ShiroRealm.java
 E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\java\com\haoyukeji\tms\controller\exception\NotFoundException.java

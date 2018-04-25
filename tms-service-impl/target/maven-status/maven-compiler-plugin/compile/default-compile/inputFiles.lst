@@ -4,6 +4,8 @@ E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\t
 E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\service\impl\RolePermissionServiceImpl.java
 E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\mapper\AccountLoginLogMapper.java
 E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\mapper\StoreAccountLogMapper.java
+E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\service\impl\StoreServiceImpl.java
+E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\fileStore\QiniuStore.java
 E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\mapper\RoleHasAccountMapper.java
 E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\service\impl\AccountServiceImpl.java
 E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\mapper\PermissionsHasRoleMapper.java

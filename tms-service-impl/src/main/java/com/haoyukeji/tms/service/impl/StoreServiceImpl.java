@@ -2,14 +2,19 @@ package com.haoyukeji.tms.service.impl;
 
 import com.haoyukeji.tms.entity.Store;
 import com.haoyukeji.tms.entity.StoreAccount;
+import com.haoyukeji.tms.entity.StoreAccountExample;
+import com.haoyukeji.tms.entity.StoreExample;
+import com.haoyukeji.tms.exception.ServiceException;
 import com.haoyukeji.tms.mapper.StoreAccountMapper;
 import com.haoyukeji.tms.mapper.StoreMapper;
 import com.haoyukeji.tms.service.StoreService;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class StoreServiceImpl implements StoreService {
@@ -24,6 +29,7 @@ public class StoreServiceImpl implements StoreService {
      * @param store
      */
     @Override
+    @Transactional(rollbackFor = RuntimeException.class)
     public void saveNewStore(Store store) {
         store.setStoreCreateTime(new Date());
         storeMapper.insertSelective(store);
@@ -41,5 +47,63 @@ public class StoreServiceImpl implements StoreService {
 
         storeAccountMapper.insertSelective(storeAccount);
 
+        //更新关联的账号Id
+        store.setStoreAccountId(storeAccount.getId());
+        storeMapper.updateByPrimaryKeySelective(store);
+
+    }
+
+    /**
+     * 查询所有的销售点
+     */
+    @Override
+    public List<Store> findAllStore() {
+        StoreExample storeExample = new StoreExample();
+        return storeMapper.selectByExample(storeExample);
+    }
+
+    /**
+     * 根据售票点id查询售票点信息
+     * @param id
+     */
+    @Override
+    public Store findStoreById(Integer id) {
+        return storeMapper.selectByPrimaryKey(id);
+
+    }
+
+    /**
+     * 修改售票点信息
+     * @param store
+     */
+    @Override
+    @Transactional(rollbackFor = RuntimeException.class)
+    public void updateStore(Store store) {
+        store.setStoreUpdateTime(new Date());
+
+        //判断手机号是否更改
+        StoreAccount storeAccount = storeAccountMapper.selectByPrimaryKey(store.getId());
+        if (!store.getStoreMobile().equals(storeAccount.getStoreAccountMobile())) {
+            storeAccount.setStoreAccountMobile(store.getStoreMobile());
+            storeAccount.setStoreAccountPassword(DigestUtils.md5Hex(store.getStoreMobile().substring(5)));
+            storeAccount.setStoreAccountUpdateTime(new Date());
+
+            storeAccountMapper.updateByPrimaryKeySelective(storeAccount);
+        }
+        storeMapper.updateByPrimaryKeySelective(store);
+    }
+
+    /**
+     * 删除售票点以及售票点账号
+     * @param id
+     * @throws ServiceException 删除失败时抛出异常
+     */
+    @Override
+    public void delStoreWithAccountById(Integer id) throws ServiceException {
+        StoreAccount storeAccount = storeAccountMapper.selectByPrimaryKey(id);
+        if (storeAccount != null) {
+            storeAccountMapper.deleteByPrimaryKey(id);
+        }
+        storeMapper.deleteByPrimaryKey(id);
     }
 }

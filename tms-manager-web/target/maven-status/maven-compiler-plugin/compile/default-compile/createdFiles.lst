@@ -5,3 +5,4 @@ com\haoyukeji\tms\controller\StoreController.class
 com\haoyukeji\tms\controller\RoleController.class
 com\haoyukeji\tms\controller\LoginController.class
 com\haoyukeji\tms\controller\AccountController.class
+com\haoyukeji\tms\shiro\CustomerFilterChainDefinition.class

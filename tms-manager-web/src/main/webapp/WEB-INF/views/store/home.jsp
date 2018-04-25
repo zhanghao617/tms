@@ -61,18 +61,17 @@ er
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td><a href="">理工大</a></td>
-                            <td>张三丰</td>
-                            <td>15943</td>
-                        </tr>
-                        <%--<c:forEach items="${pageInfo.list}" var="store">
-                            <tr>
-                                <td><a href="/store/${store.id}">${store.storeName}</a></td>
-                                <td>${store.storeManager}</td>
-                                <td>${store.storeTel}</td>
-                            </tr>
-                        </c:forEach>--%>
+                            <c:forEach items="${storeList}" var="stores">
+                                <tr>
+                                    <td><a href="/store/${stores.id}/detail">${stores.storeName}</a></td>
+                                    <td>${stores.storeAdmin}</td>
+                                    <td>${stores.storeMobile}</td>
+                                    <td>
+                                        <a href="/store/${stores.id}/edit"><i class="fa fa-edit"></i></a>
+                                        <a style="color: #E98582;" class="delLink" rel="${stores.id}" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
                         </tbody>
                     </table>
                 </div>
@@ -85,5 +84,25 @@ er
 <!-- ./wrapper -->
 
 <%@include file="../include/js.jsp"%>
+<script src="/static/plugins/layer/layer.js"></script>
+<script>
+    $(function() {
+        $(".delLink").click(function(){
+            var id = $(this).attr("rel");
+            layer.confirm("确定要删除吗",function (index) {
+                layer.close(index);
+                // window.parent.location.reload();
+                $.get("/store/"+id+"/del").done(function (result) {
+                    if(result.status == 'success') {
+                        window.history.go(0);
+                    } else {
+                        layer.msg(result.message);
+                    }
+                }).error(function () {
+                    layer.msg("服务器忙");
+                });
+            })
+        });
+    });
 </body>
 </html>
