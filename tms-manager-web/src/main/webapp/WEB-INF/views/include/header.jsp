@@ -1,3 +1,4 @@
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <header class="main-header">
@@ -107,7 +108,7 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="/static/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">李云龙</span>
+                        <span class="hidden-xs"><shiro:principal property="accountName"/></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -115,11 +116,11 @@
                             <img src="/static/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                             <p>
-                                李云龙
-                                <small>团长</small>
+                                <shiro:principal property="accountName"/>
+                                <small>海关部</small>
                             </p>
                         </li>
-                        <!-- Menu Body -->
+                       <%-- <!-- Menu Body -->
                         <li class="user-body">
                             <div class="row">
                                 <div class="col-xs-4 text-center">
@@ -133,7 +134,7 @@
                                 </div>
                             </div>
                             <!-- /.row -->
-                        </li>
+                        </li>--%>
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">

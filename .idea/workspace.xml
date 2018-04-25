@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="874f2334-81cc-403b-a0d7-061d7a6ccbd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/target/classes/com/haoyukeji/tms/controller/LoginController.class" afterPath="$PROJECT_DIR$/tms-manager-web/target/classes/com/haoyukeji/tms/controller/LoginController.class" />
     </list>
     <ignored path="$PROJECT_DIR$/tms-commons/target/" />
     <ignored path="$PROJECT_DIR$/tms-service/target/" />
@@ -35,33 +41,33 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="105" column="7" lean-forward="false" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+            <state relative-caret-position="480">
+              <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
               <folding>
-                <element signature="e#3387#3388#0" expanded="true" />
-                <element signature="e#3417#3418#0" expanded="true" />
-                <element signature="e#3760#3761#0" expanded="true" />
-                <element signature="e#3794#3795#0" expanded="true" />
+                <element signature="e#3412#3413#0" expanded="true" />
+                <element signature="e#3442#3443#0" expanded="true" />
+                <element signature="e#3785#3786#0" expanded="true" />
+                <element signature="e#3819#3820#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-shiro.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spring-shiro.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
+            <state relative-caret-position="256">
               <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp">
+      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
+            <state relative-caret-position="471">
+              <caret line="100" column="40" lean-forward="false" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -140,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/permission/edit.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/role/edit.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/RoleController.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/new.jsp" />
@@ -151,7 +156,6 @@
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/edit.jsp" />
         <option value="$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/dto/ResponseBean.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/pom.xml" />
-        <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/AccountController.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/PermissionController.java" />
         <option value="$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/entity/StoreAccountLog.java" />
@@ -189,8 +193,10 @@
         <option value="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java" />
         <option value="$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" />
-        <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" />
+        <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp" />
       </list>
     </option>
   </component>
@@ -250,7 +256,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -368,6 +374,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-manager-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tms" type="462c0819:PsiDirectoryNode" />
               <item name="shiro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -409,7 +425,18 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-manager-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
@@ -676,12 +703,12 @@
       <workItem from="1524495655217" duration="1338000" />
       <workItem from="1524529803011" duration="8610000" />
       <workItem from="1524616851932" duration="9183000" />
-      <workItem from="1524666425519" duration="4437000" />
+      <workItem from="1524666425519" duration="10376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193030000" />
+    <option name="totallyTimeSpent" value="198969000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,8 +720,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -717,7 +743,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.851227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6646248" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -785,20 +811,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/role/new.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3168">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/static/plugins/uploader/webuploader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/entity/Account.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -844,13 +856,6 @@
         <state relative-caret-position="224">
           <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1039">
-          <caret line="117" column="51" lean-forward="true" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1168,29 +1173,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="48" selection-end-line="142" selection-end-column="48" />
+        <state relative-caret-position="458">
+          <caret line="136" column="33" lean-forward="true" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="105" column="7" lean-forward="false" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+        <state relative-caret-position="480">
+          <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
           <folding>
-            <element signature="e#3387#3388#0" expanded="true" />
-            <element signature="e#3417#3418#0" expanded="true" />
-            <element signature="e#3760#3761#0" expanded="true" />
-            <element signature="e#3794#3795#0" expanded="true" />
+            <element signature="e#3412#3413#0" expanded="true" />
+            <element signature="e#3442#3443#0" expanded="true" />
+            <element signature="e#3785#3786#0" expanded="true" />
+            <element signature="e#3819#3820#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="50" column="80" lean-forward="false" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
+        <state relative-caret-position="256">
           <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="100" column="40" lean-forward="false" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
           <folding />
         </state>
       </provider>

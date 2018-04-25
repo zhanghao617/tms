@@ -60,9 +60,11 @@
                     <div class="box-header">
                         <h3 class="box-title">账号列表</h3>
                         <div class="box-tools">
-                            <a href="/manager/account/new" class="btn btn-success btn-sm">
-                                <i class="fa fa-plus"></i> 新增账号
-                            </a>
+                            <shiro:hasPermission name="account:add">
+                                <a href="/manager/account/new" class="btn btn-success btn-sm">
+                                    <i class="fa fa-plus"></i> 新增账号
+                                </a>
+                            </shiro:hasPermission>
                         </div>
                     </div>
                 <div class="box-body">
@@ -94,10 +96,10 @@
                                     <fmt:formatDate value="${account.createTime}"/>
                                 </td>
                                 <td>
-                                    <%--<shiro:hasPermission name="account:edit">--%>
-                                    <a href="/manager/account/${account.id}/edit"><i class="fa fa-edit"></i></a>
-                                    <a style="color: #E98582;" class="delLink" rel="${account.id}" href="javascript:;"><i class="fa fa-trash"></i></a>
-                                    <%--</shiro:hasPermission>--%>
+                                    <shiro:hasPermission name="account:edit">
+                                        <a href="/manager/account/${account.id}/edit"><i class="fa fa-edit"></i></a>
+                                        <a style="color: #E98582;" class="delLink" rel="${account.id}" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                    </shiro:hasPermission>
                                 </td>
                             </tr>
                         </c:forEach>

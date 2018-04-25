@@ -58,6 +58,7 @@ public class LoginController {
         try {
             subject.login(usernamePasswordToken);
 
+            //登录后跳转目标的判断
             SavedRequest savedRequest = WebUtils.getSavedRequest(request);
             String url = "/home";
             if (savedRequest != null) {
