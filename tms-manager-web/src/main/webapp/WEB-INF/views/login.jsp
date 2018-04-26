@@ -45,7 +45,8 @@
 <body class="hold-transition login-page" style="background: url(/static/dist/img/smh.gif)">
 <div class="login-box">
     <div class="login-logo ddd">
-        <a href="/"><b>TMS</b>综合管理系统</a>
+        <%--<a href="/"><b>TMS</b>综合管理系统</a>--%>
+        <a href="#"><img src="/static/dist/img/tms.png" alt="title" width="" height=""></a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body dd">

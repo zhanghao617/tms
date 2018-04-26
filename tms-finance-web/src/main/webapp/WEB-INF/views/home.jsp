@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TMS | 综合管理系统</title>
+    <title>TMS | 库存结算系统</title>
     <%@include file="include/css.jsp"%>
 </head>
 
