@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="874f2334-81cc-403b-a0d7-061d7a6ccbd7" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/static/dist/img/TMSzhgl.PNG" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/static/dist/img/smh.gif" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" />
+      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java" />
       <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" />
       <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp" />
       <change beforePath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp" afterPath="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp" />
-      <change beforePath="$PROJECT_DIR$/tms-manager-web/target/classes/com/haoyukeji/tms/controller/LoginController.class" afterPath="$PROJECT_DIR$/tms-manager-web/target/classes/com/haoyukeji/tms/controller/LoginController.class" />
     </list>
     <ignored path="$PROJECT_DIR$/tms-commons/target/" />
     <ignored path="$PROJECT_DIR$/tms-service/target/" />
@@ -38,71 +38,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-              <folding>
-                <element signature="e#3412#3413#0" expanded="true" />
-                <element signature="e#3442#3443#0" expanded="true" />
-                <element signature="e#3785#3786#0" expanded="true" />
-                <element signature="e#3819#3820#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="spring-shiro.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+            <state relative-caret-position="283">
+              <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp">
+      <file leaf-file-name="CustomerFilterChainDefinition.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="100" column="40" lean-forward="false" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShiroRealm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+            <state relative-caret-position="873">
+              <caret line="73" column="64" lean-forward="false" selection-start-line="73" selection-start-column="64" selection-end-line="73" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#872#873#0" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
+                <element signature="e#1157#1158#0" expanded="true" />
+                <element signature="e#1203#1204#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -132,6 +87,7 @@
       <find>BaseResultMap</find>
       <find>token</find>
       <find>upToken</find>
+      <find>filterChainDefinitions</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -183,7 +139,6 @@
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/store/home.jsp" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/shiro.ini" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/resources/ehcache.xml" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/error/401.jsp" />
         <option value="$PROJECT_DIR$/tms-service-impl/src/main/resources/Log4j.properties" />
@@ -193,10 +148,11 @@
         <option value="$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java" />
         <option value="$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/include/header.jsp" />
-        <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp" />
+        <option value="$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp" />
+        <option value="$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml" />
+        <option value="$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java" />
       </list>
     </option>
   </component>
@@ -299,8 +255,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -374,16 +330,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tms-manager-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tms" type="462c0819:PsiDirectoryNode" />
               <item name="shiro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -399,6 +345,33 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-manager-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-manager-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-manager-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
@@ -444,6 +417,32 @@
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tms-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
               <item name="tms-service-impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -483,15 +482,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../git/Git/bin/git.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.haoyukeji.tms.service.impl" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\webapp\static\dist\img" />
       <recent name="E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\resources" />
       <recent name="E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\webapp\WEB-INF" />
       <recent name="E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\webapp\WEB-INF\views\store" />
       <recent name="E:\master\IDEA\root\WorkSpace\tms\tms-manager-web\src\main\webapp\static\plugins\uploader" />
-      <recent name="E:\master\IDEA\root\WorkSpace\tms\tms-service-impl\src\main\java\com\haoyukeji\tms\mapper" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.haoyukeji.tms.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -704,11 +703,12 @@
       <workItem from="1524529803011" duration="8610000" />
       <workItem from="1524616851932" duration="9183000" />
       <workItem from="1524666425519" duration="10376000" />
+      <workItem from="1524703426950" duration="9133000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198969000" />
+    <option name="totallyTimeSpent" value="208102000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -721,6 +721,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -743,7 +744,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.851227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6646248" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11195159" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -786,7 +787,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.851227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6646248" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -802,7 +803,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -811,13 +812,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tms-commons/src/main/java/com/haoyukeji/tms/entity/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tms-service-impl/src/main/resources/mapper/AccountMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -855,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,14 +1023,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/shiro.ini" />
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1440">
@@ -1125,7 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="168" column="17" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,21 +1127,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tms-service/src/main/java/com/haoyukeji/tms/service/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
+        <state relative-caret-position="576">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
@@ -1165,7 +1137,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tms-service-impl/src/main/java/com/haoyukeji/tms/service/impl/AccountServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
+        <state relative-caret-position="832">
           <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
           <folding />
         </state>
@@ -1179,19 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-          <folding>
-            <element signature="e#3412#3413#0" expanded="true" />
-            <element signature="e#3442#3443#0" expanded="true" />
-            <element signature="e#3785#3786#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1200,27 +1159,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp">
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/ShiroRealm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="50" column="80" lean-forward="false" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
-          <folding />
+        <state relative-caret-position="864">
+          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#872#873#0" expanded="false" />
+            <element signature="e#899#900#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml">
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <folding>
+            <element signature="e#3412#3413#0" expanded="false" />
+            <element signature="e#3442#3443#0" expanded="false" />
+            <element signature="e#3785#3786#0" expanded="false" />
+            <element signature="e#3819#3820#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/manager/account/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="100" column="40" lean-forward="false" selection-start-line="100" selection-start-column="40" selection-end-line="100" selection-end-column="40" />
+        <state relative-caret-position="2327">
+          <caret line="92" column="40" lean-forward="false" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#1;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/static/dist/img/TMSzhgl.PNG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/resources/spring-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tms-manager-web/src/main/java/com/haoyukeji/tms/shiro/CustomerFilterChainDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="873">
+          <caret line="73" column="64" lean-forward="false" selection-start-line="73" selection-start-column="64" selection-end-line="73" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

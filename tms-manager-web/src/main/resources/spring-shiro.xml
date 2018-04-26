@@ -40,17 +40,9 @@
         <property name="loginUrl" value="/" />
         <property name="successUrl" value="/home" />
         <property name="unauthorizedUrl" value="/401" />
-        <property name="filterChainDefinitions">
-            <value>
-                /favicon.ico = anon
-                /static/** = anon
-                /logout = logout
-                /** = user
-            </value>
-        </property>
     </bean>
     <!--6. 配置ShiroFilter id必须和web.xml中的filter节点的filter-name相同-->
-    <!--<bean id="filterChainDefinition" class="com.haoyukeji.tms.shiro.CustomerFilterChainDefinition">
+    <bean id="filterChainDefinition" class="com.haoyukeji.tms.shiro.CustomerFilterChainDefinition">
         <property name="shiroFilter" ref="shiroFilter"/>
         <property name="filterChainDefinitions">
             <value>
@@ -59,8 +51,7 @@
                 /logout = logout
             </value>
         </property>
-    </bean>-->
-
+    </bean>
 
 
 

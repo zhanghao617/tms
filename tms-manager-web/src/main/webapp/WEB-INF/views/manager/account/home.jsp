@@ -97,8 +97,8 @@
                                 </td>
                                 <td>
                                     <shiro:hasPermission name="account:edit">
-                                        <a href="/manager/account/${account.id}/edit"><i class="fa fa-edit"></i></a>
-                                        <a style="color: #E98582;" class="delLink" rel="${account.id}" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                        <a style="color: #4ebde9;" href="/manager/account/${account.id}/edit"><i class="fa fa-edit"></i></a>
+                                        <a style="color: #e92ba6;" class="delLink" rel="${account.id}" href="javascript:;"><i class="fa fa-trash"></i></a>
                                     </shiro:hasPermission>
                                 </td>
                             </tr>

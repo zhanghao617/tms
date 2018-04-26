@@ -26,14 +26,30 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .dd{
+            padding: 25px;
+            background-color:#000000;
+            background-color:rgba(0,0,0,0.2);
+        }
+        .ddd{
+            padding: 15px;
+            background-color: #FFFFFF;
+            background-color:rgba(0,0,0,0.1);
+        }
+        .dd label{
+            color: #FFFFFF;
+        }
+    </style>
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background: url(/static/dist/img/smh.gif)">
 <div class="login-box">
-    <div class="login-logo">
+    <div class="login-logo ddd">
         <a href="/"><b>TMS</b>综合管理系统</a>
     </div>
     <!-- /.login-logo -->
-    <div class="login-box-body">
+    <div class="login-box-body dd">
+
         <c:if test="${not empty message}">
             <p class="login-box-msg text-danger">${message}</p>
         </c:if>
