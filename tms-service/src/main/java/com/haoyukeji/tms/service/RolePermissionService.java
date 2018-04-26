@@ -85,4 +85,11 @@ public interface RolePermissionService {
      * @return
      */
     List<Role> findRoleByAccountId(Integer id);
+
+    /**
+     * 根据角色ID查询所有的对应的权限
+     * @param roleId 角色ID
+     * @return
+     */
+    List<Permissions> findAllPermissionsByRoleId(Integer roleId);
 }

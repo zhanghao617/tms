@@ -4,6 +4,7 @@ import com.haoyukeji.tms.dto.ResponseBean;
 import com.haoyukeji.tms.entity.Permissions;
 import com.haoyukeji.tms.exception.ServiceException;
 import com.haoyukeji.tms.service.RolePermissionService;
+import com.haoyukeji.tms.shiro.CustomerFilterChainDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +23,8 @@ public class PermissionController {
 
     @Autowired
     private RolePermissionService rolePermissionService;
+    @Autowired
+    private CustomerFilterChainDefinition customerFilterChainDefinition;
 
     @GetMapping
     public String home(Model model) {
@@ -46,7 +49,8 @@ public class PermissionController {
     @PostMapping("/new")
     public String newPermission(Permissions permissions, RedirectAttributes redirectAttributes) {
         rolePermissionService.savePermission(permissions);
-
+        //刷新shiro的权限
+        customerFilterChainDefinition.updateUelPermission();
         redirectAttributes.addFlashAttribute("message","添加成功");
         return "redirect:/manager/permission";
     }
@@ -60,6 +64,8 @@ public class PermissionController {
     public @ResponseBody ResponseBean delPermission(@PathVariable Integer id) {
         try {
             rolePermissionService.delPermissionById(id);
+            //刷新shiro的权限
+            customerFilterChainDefinition.updateUelPermission();
             return ResponseBean.success();
         }catch (ServiceException ex) {
             return ResponseBean.error(ex.getMessage());

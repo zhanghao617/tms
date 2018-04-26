@@ -27,4 +27,6 @@ public interface PermissionsMapper {
     int updateByPrimaryKeySelective(Permissions record);
 
     int updateByPrimaryKey(Permissions record);
+
+    List<Permissions> findAllByRoleId(Integer roleId);
 }

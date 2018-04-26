@@ -196,6 +196,16 @@ public class RolePermissionServiceImpl implements RolePermissionService {
     }
 
     /**
+     * 根据角色ID查询所有的对应的权限
+     * @param roleId 角色ID
+     * @return
+     */
+    @Override
+    public List<Permissions> findAllPermissionsByRoleId(Integer roleId) {
+        return permissionsMapper.findAllByRoleId(roleId);
+    }
+
+    /**
      * 将查询到的权限列表分类
      * @param permissionList 查询到的集合
      * @param list  处理后的集合

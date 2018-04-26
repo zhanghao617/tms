@@ -42,7 +42,7 @@ public class CustomerFilterChainDefinition{
         //清除原有的url权限
         getFilterChainManager().getFilterChains().clear();
         load();
-        logger.info("------------初始化Url权限-----------");
+        logger.info("------------初始化Url权限完成-----------");
     }
 
     //重新加载url权限
