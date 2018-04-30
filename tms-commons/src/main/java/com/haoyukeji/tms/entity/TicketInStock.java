@@ -7,17 +7,17 @@ import java.util.Date;
  * @author 
  */
 public class TicketInStock implements Serializable {
-
     private Integer id;
+
     /**
-     * 入库人ID
+     * 入库人id
      */
     private Integer inStockId;
 
     /**
      * 入库人姓名
      */
-    private String  inStockName;
+    private String inStockName;
 
     /**
      * 入库数量
@@ -91,7 +91,7 @@ public class TicketInStock implements Serializable {
         return inStockSum;
     }
 
-    public void setInStockSum(int inStockSum) {
+    public void setInStockSum(Integer inStockSum) {
         this.inStockSum = inStockSum;
     }
 

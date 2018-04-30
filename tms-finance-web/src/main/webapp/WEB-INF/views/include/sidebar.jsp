@@ -43,8 +43,8 @@
                         </span>
                 </a>
             </li>
-            <li class="${param.menu == 'ticket_store' ? 'active' : ''}">
-                <a href="/store">
+            <li class="${param.menu == 'ticket_chart' ? 'active' : ''}">
+                <a href="/ticket/chart">
                     <i class="fa fa-circle-o"></i> <span>盘点统计</span>
                     <span class="pull-right-container">
                           <small class="label pull-right bg-black">★</small>

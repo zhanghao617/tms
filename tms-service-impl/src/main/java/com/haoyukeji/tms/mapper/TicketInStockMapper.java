@@ -1,8 +1,9 @@
 package com.haoyukeji.tms.mapper;
 
+import java.util.List;
+
 import com.haoyukeji.tms.entity.TicketInStock;
 import com.haoyukeji.tms.entity.TicketInStockExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface TicketInStockMapper {

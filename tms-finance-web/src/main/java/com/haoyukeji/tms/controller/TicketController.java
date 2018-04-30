@@ -1,5 +1,6 @@
 package com.haoyukeji.tms.controller;
 
+import com.haoyukeji.tms.dto.ResponseBean;
 import com.haoyukeji.tms.entity.Store;
 import com.haoyukeji.tms.entity.TicketInStock;
 import com.haoyukeji.tms.entity.TicketOutStore;
@@ -9,13 +10,11 @@ import com.haoyukeji.tms.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/ticket")
@@ -72,12 +71,23 @@ public class TicketController {
     }
 
 
+    /**
+     * 年票下发首页
+     * @param model
+     * @return
+     */
     @GetMapping("/out")
     public String ticketOutHome(Model model) {
-
+        List<TicketOutStore> ticketOutStores = ticketService.findAllTicketOutStore();
+        model.addAttribute("ticketOutStores",ticketOutStores);
         return "/ticket/out/home";
     }
 
+    /**
+     * 年票下发
+     * @param model
+     * @return
+     */
     @GetMapping("/out/new")
     public  String outTicketOut(Model model) {
         List<Store> storeList = storeService.findAllStore();
@@ -94,6 +104,28 @@ public class TicketController {
             redirectAttributes.addFlashAttribute("message",ex.getMessage());
         }
         return "redirect:/ticket/out";
+    }
+
+    /**
+     * 删除年票下发记录
+     */
+    @GetMapping("/out/{id:\\d+}/del")
+    @ResponseBody
+    public ResponseBean delTicketOut(@PathVariable Integer id) {
+        ticketService.delOutStoreById(id);
+        return ResponseBean.success();
+    }
+
+    /**
+     * 年票统计
+     * @param model
+     * @return
+     */
+    @GetMapping("/chart")
+    public String chartTicket(Model model) {
+        Map<String,Long> resultMap = ticketService.countTicketByState();
+        model.addAttribute("resultMap",resultMap);
+        return "/ticket/chart/home";
     }
 
 }

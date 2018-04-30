@@ -62,30 +62,30 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <c:if test="${empty page.list}">
+                            <c:if test="${empty ticketOutStores}">
                                 <tr>
                                     <td colspan="13">暂无记录</td>
                                 </tr>
                             </c:if>
-                            <c:forEach items="${ticketList}" var="ticket">
+                            <c:forEach items="${ticketOutStores}" var="ticket">
                                 <tr>
                                     <td><fmt:formatDate value="${ticket.createTime}"/></td>
-                                    <td>${record.storeAccountName}</td>
-                                    <td>${record.content}</td>
-                                    <td>${record.beginTicketNum}</td>
-                                    <td>${record.endTicketNum}</td>
-                                    <td>${record.totalNum}</td>
-                                    <td>${record.price}</td>
-                                    <td>${record.totalPrice}</td>
-                                    <td>${record.payType}</td>
-                                    <td>${record.outAccountName}</td>
+                                    <td>${ticket.storeAccountName}</td>
+                                    <td>${ticket.content}</td>
+                                    <td>${ticket.beginTicketNum}</td>
+                                    <td>${ticket.endTicketNum}</td>
+                                    <td>${ticket.totalNum}</td>
+                                    <td>${ticket.price}</td>
+                                    <td>${ticket.totalPrice}</td>
+                                    <td>${ticket.payType}</td>
+                                    <td>${ticket.outAccountName}</td>
                                     <td>
-                                        <span class="label ${record.state == '未支付' ? 'label-danger' : 'label-success'}">${record.state}</span>
+                                        <span class="label ${ticket.state == '未支付' ? 'label-danger' : 'label-success'}">${ticket.state}</span>
                                     </td>
-                                    <td>${record.financeAccountName}</td>
+                                    <td>${ticket.financeAccountName}</td>
                                     <td>
-                                        <c:if test="${record.state == '未支付'}">
-                                            <a href="javascript:;" rel="${record.id}" class="del_link" title="取消"><i class="fa fa-trash text-danger"></i></a>
+                                        <c:if test="${ticket.state == '未支付'}">
+                                            <a href="javascript:;" rel="${ticket.id}" class="del" title="取消"><i class="fa fa-trash text-danger"></i></a>
                                         </c:if>
                                     </td>
                                 </tr>
@@ -105,21 +105,19 @@
 <script src="/static/plugins/layer/layer.js"></script>
 <script>
     $(function() {
-        $(".delLink").click(function(){
+        $(".del").click(function () {
             var id = $(this).attr("rel");
-            layer.confirm("确定要删除吗",function (index) {
+            layer.confirm("确定要取消吗",function (index) {
                 layer.close(index);
-                // window.parent.location.reload();
-                $.get("/store/"+id+"/del").done(function (result) {
+                $.get("/ticket/out/"+id+"/del").done(function (result) {
                     if(result.status == 'success') {
+                        layer.msg("删除成功");
                         window.history.go(0);
-                    } else {
-                        layer.msg(result.message);
                     }
                 }).error(function () {
-                    layer.msg("服务器忙");
+                    layer.msg("服务器异常");
                 });
-            })
+            });
         });
     });
 </body>

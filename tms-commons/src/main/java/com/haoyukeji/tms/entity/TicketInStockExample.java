@@ -165,6 +165,66 @@ public class TicketInStockExample {
             return (Criteria) this;
         }
 
+        public Criteria andInStockIdIsNull() {
+            addCriterion("in_stock_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdIsNotNull() {
+            addCriterion("in_stock_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdEqualTo(Integer value) {
+            addCriterion("in_stock_id =", value, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdNotEqualTo(Integer value) {
+            addCriterion("in_stock_id <>", value, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdGreaterThan(Integer value) {
+            addCriterion("in_stock_id >", value, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("in_stock_id >=", value, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdLessThan(Integer value) {
+            addCriterion("in_stock_id <", value, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdLessThanOrEqualTo(Integer value) {
+            addCriterion("in_stock_id <=", value, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdIn(List<Integer> values) {
+            addCriterion("in_stock_id in", values, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdNotIn(List<Integer> values) {
+            addCriterion("in_stock_id not in", values, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdBetween(Integer value1, Integer value2) {
+            addCriterion("in_stock_id between", value1, value2, "inStockId");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("in_stock_id not between", value1, value2, "inStockId");
+            return (Criteria) this;
+        }
+
         public Criteria andInStockNameIsNull() {
             addCriterion("in_stock_name is null");
             return (Criteria) this;
@@ -245,62 +305,52 @@ public class TicketInStockExample {
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumEqualTo(String value) {
+        public Criteria andInStockNumEqualTo(Integer value) {
             addCriterion("in_stock_num =", value, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumNotEqualTo(String value) {
+        public Criteria andInStockNumNotEqualTo(Integer value) {
             addCriterion("in_stock_num <>", value, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumGreaterThan(String value) {
+        public Criteria andInStockNumGreaterThan(Integer value) {
             addCriterion("in_stock_num >", value, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumGreaterThanOrEqualTo(String value) {
+        public Criteria andInStockNumGreaterThanOrEqualTo(Integer value) {
             addCriterion("in_stock_num >=", value, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumLessThan(String value) {
+        public Criteria andInStockNumLessThan(Integer value) {
             addCriterion("in_stock_num <", value, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumLessThanOrEqualTo(String value) {
+        public Criteria andInStockNumLessThanOrEqualTo(Integer value) {
             addCriterion("in_stock_num <=", value, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumLike(String value) {
-            addCriterion("in_stock_num like", value, "inStockNum");
-            return (Criteria) this;
-        }
-
-        public Criteria andInStockNumNotLike(String value) {
-            addCriterion("in_stock_num not like", value, "inStockNum");
-            return (Criteria) this;
-        }
-
-        public Criteria andInStockNumIn(List<String> values) {
+        public Criteria andInStockNumIn(List<Integer> values) {
             addCriterion("in_stock_num in", values, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumNotIn(List<String> values) {
+        public Criteria andInStockNumNotIn(List<Integer> values) {
             addCriterion("in_stock_num not in", values, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumBetween(String value1, String value2) {
+        public Criteria andInStockNumBetween(Integer value1, Integer value2) {
             addCriterion("in_stock_num between", value1, value2, "inStockNum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockNumNotBetween(String value1, String value2) {
+        public Criteria andInStockNumNotBetween(Integer value1, Integer value2) {
             addCriterion("in_stock_num not between", value1, value2, "inStockNum");
             return (Criteria) this;
         }
@@ -315,62 +365,52 @@ public class TicketInStockExample {
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumEqualTo(String value) {
+        public Criteria andInStockSumEqualTo(Integer value) {
             addCriterion("in_stock_sum =", value, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumNotEqualTo(String value) {
+        public Criteria andInStockSumNotEqualTo(Integer value) {
             addCriterion("in_stock_sum <>", value, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumGreaterThan(String value) {
+        public Criteria andInStockSumGreaterThan(Integer value) {
             addCriterion("in_stock_sum >", value, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumGreaterThanOrEqualTo(String value) {
+        public Criteria andInStockSumGreaterThanOrEqualTo(Integer value) {
             addCriterion("in_stock_sum >=", value, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumLessThan(String value) {
+        public Criteria andInStockSumLessThan(Integer value) {
             addCriterion("in_stock_sum <", value, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumLessThanOrEqualTo(String value) {
+        public Criteria andInStockSumLessThanOrEqualTo(Integer value) {
             addCriterion("in_stock_sum <=", value, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumLike(String value) {
-            addCriterion("in_stock_sum like", value, "inStockSum");
-            return (Criteria) this;
-        }
-
-        public Criteria andInStockSumNotLike(String value) {
-            addCriterion("in_stock_sum not like", value, "inStockSum");
-            return (Criteria) this;
-        }
-
-        public Criteria andInStockSumIn(List<String> values) {
+        public Criteria andInStockSumIn(List<Integer> values) {
             addCriterion("in_stock_sum in", values, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumNotIn(List<String> values) {
+        public Criteria andInStockSumNotIn(List<Integer> values) {
             addCriterion("in_stock_sum not in", values, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumBetween(String value1, String value2) {
+        public Criteria andInStockSumBetween(Integer value1, Integer value2) {
             addCriterion("in_stock_sum between", value1, value2, "inStockSum");
             return (Criteria) this;
         }
 
-        public Criteria andInStockSumNotBetween(String value1, String value2) {
+        public Criteria andInStockSumNotBetween(Integer value1, Integer value2) {
             addCriterion("in_stock_sum not between", value1, value2, "inStockSum");
             return (Criteria) this;
         }
@@ -702,6 +742,76 @@ public class TicketInStockExample {
 
         public Criteria andTicketInStockStateNotBetween(String value1, String value2) {
             addCriterion("ticket_in_stock_state not between", value1, value2, "ticketInStockState");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentIsNull() {
+            addCriterion("in_stock_content is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentIsNotNull() {
+            addCriterion("in_stock_content is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentEqualTo(String value) {
+            addCriterion("in_stock_content =", value, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentNotEqualTo(String value) {
+            addCriterion("in_stock_content <>", value, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentGreaterThan(String value) {
+            addCriterion("in_stock_content >", value, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentGreaterThanOrEqualTo(String value) {
+            addCriterion("in_stock_content >=", value, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentLessThan(String value) {
+            addCriterion("in_stock_content <", value, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentLessThanOrEqualTo(String value) {
+            addCriterion("in_stock_content <=", value, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentLike(String value) {
+            addCriterion("in_stock_content like", value, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentNotLike(String value) {
+            addCriterion("in_stock_content not like", value, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentIn(List<String> values) {
+            addCriterion("in_stock_content in", values, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentNotIn(List<String> values) {
+            addCriterion("in_stock_content not in", values, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentBetween(String value1, String value2) {
+            addCriterion("in_stock_content between", value1, value2, "inStockContent");
+            return (Criteria) this;
+        }
+
+        public Criteria andInStockContentNotBetween(String value1, String value2) {
+            addCriterion("in_stock_content not between", value1, value2, "inStockContent");
             return (Criteria) this;
         }
     }

@@ -3,6 +3,8 @@ package com.haoyukeji.tms.mapper;
 import com.haoyukeji.tms.entity.Ticket;
 import com.haoyukeji.tms.entity.TicketExample;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface TicketMapper {
@@ -30,5 +32,13 @@ public interface TicketMapper {
 
     void batchInsert(@Param("ticketList") List<Ticket> ticketList);
 
-    List<Ticket> findByBeginNumAndEndNum(String beginTicketNum, String endTicketNum);
+    Map<String,Long> countByState();
+
+    Map<String,Long> countByStateAndStoreAccountId(Integer storeAccountId);
+
+    List<Ticket> findByBeginNumAndEndNum(@Param("beginNum") String beginNum,@Param("endNum") String endNum);
+    List<Ticket> findByBeginNumAndEndNumAndState(@Param("beginNum") String beginNum,
+                                                 @Param("endNum") String endNum,
+                                                 @Param("state") String state);
+    void batchDeleteById(@Param("idList") List<Long> idList);
 }

@@ -19,6 +19,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class TicketServiceImpl implements TicketService {
@@ -27,14 +28,13 @@ public class TicketServiceImpl implements TicketService {
 
     @Autowired
     private TicketInStockMapper ticketInStockMapper;
-
     @Autowired
     private ShiroUtil shiroUtil;
     @Autowired
     private TicketMapper ticketMapper;
     @Autowired
     private StoreMapper storeMapper;
-
+    @Autowired
     private TicketOutStoreMapper ticketOutStoreMapper;
 
 
@@ -165,5 +165,39 @@ public class TicketServiceImpl implements TicketService {
         ticketOutStoreMapper.insertSelective(ticketOutStore);
 
         logger.info("新增年票下发记录 {} ",ticketOutStore);
+    }
+
+    /**
+     * 查询全部下发记录
+     * @return
+     */
+    @Override
+    public List<TicketOutStore> findAllTicketOutStore() {
+        return ticketOutStoreMapper.selectByExample(new TicketOutStoreExample());
+    }
+
+    /**
+     * 根据逐渐删除下发记录
+     *
+     * @param id
+     */
+    @Override
+    public void delOutStoreById(Integer id) {
+        TicketOutStore ticketOutStore = ticketOutStoreMapper.selectByPrimaryKey(id);
+        if (ticketOutStore != null) {
+            if (TicketOutStore.STATE_NO_PAY.equals(ticketOutStore.getState())) {
+                ticketOutStoreMapper.deleteByPrimaryKey(id);
+            }
+        }
+    }
+
+    /**
+     * 年票统计
+     *
+     * @return
+     */
+    @Override
+    public Map<String, Long> countTicketByState() {
+        return ticketMapper.countByState();
     }
 }

@@ -3,14 +3,16 @@
 <mapper namespace="com.haoyukeji.tms.mapper.TicketInStockMapper">
   <resultMap id="BaseResultMap" type="com.haoyukeji.tms.entity.TicketInStock">
     <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="in_stock_id" jdbcType="INTEGER" property="inStockId" />
     <result column="in_stock_name" jdbcType="VARCHAR" property="inStockName" />
-    <result column="in_stock_num" jdbcType="VARCHAR" property="inStockNum" />
-    <result column="in_stock_sum" jdbcType="VARCHAR" property="inStockSum" />
+    <result column="in_stock_num" jdbcType="INTEGER" property="inStockNum" />
+    <result column="in_stock_sum" jdbcType="INTEGER" property="inStockSum" />
     <result column="in_stock_start" jdbcType="VARCHAR" property="inStockStart" />
     <result column="in_stock_end" jdbcType="VARCHAR" property="inStockEnd" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="ticket_in_stock_state" jdbcType="VARCHAR" property="ticketInStockState" />
+    <result column="in_stock_content" jdbcType="VARCHAR" property="inStockContent" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -71,8 +73,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, in_stock_name, in_stock_num, in_stock_sum, in_stock_start, in_stock_end, create_time, 
-    update_time, ticket_in_stock_state
+    id, in_stock_id, in_stock_name, in_stock_num, in_stock_sum, in_stock_start, in_stock_end, 
+    create_time, update_time, ticket_in_stock_state, in_stock_content
   </sql>
   <select id="selectByExample" parameterType="com.haoyukeji.tms.entity.TicketInStockExample" resultMap="BaseResultMap">
     select
@@ -105,20 +107,23 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.haoyukeji.tms.entity.TicketInStock">
-    insert into ticket_in_stock (id, in_stock_name, in_stock_num, 
-      in_stock_sum, in_stock_start, in_stock_end, 
-      create_time, update_time, ticket_in_stock_state
-      )
-    values (#{id,jdbcType=INTEGER}, #{inStockName,jdbcType=VARCHAR}, #{inStockNum,jdbcType=VARCHAR}, 
-      #{inStockSum,jdbcType=VARCHAR}, #{inStockStart,jdbcType=VARCHAR}, #{inStockEnd,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{ticketInStockState,jdbcType=VARCHAR}
-      )
+    insert into ticket_in_stock (id, in_stock_id, in_stock_name, 
+      in_stock_num, in_stock_sum, in_stock_start, 
+      in_stock_end, create_time, update_time, 
+      ticket_in_stock_state, in_stock_content)
+    values (#{id,jdbcType=INTEGER}, #{inStockId,jdbcType=INTEGER}, #{inStockName,jdbcType=VARCHAR}, 
+      #{inStockNum,jdbcType=INTEGER}, #{inStockSum,jdbcType=INTEGER}, #{inStockStart,jdbcType=VARCHAR}, 
+      #{inStockEnd,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{ticketInStockState,jdbcType=VARCHAR}, #{inStockContent,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.haoyukeji.tms.entity.TicketInStock">
     insert into ticket_in_stock
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
+      </if>
+      <if test="inStockId != null">
+        in_stock_id,
       </if>
       <if test="inStockName != null">
         in_stock_name,
@@ -152,14 +157,17 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
+      <if test="inStockId != null">
+        #{inStockId,jdbcType=INTEGER},
+      </if>
       <if test="inStockName != null">
         #{inStockName,jdbcType=VARCHAR},
       </if>
       <if test="inStockNum != null">
-        #{inStockNum,jdbcType=VARCHAR},
+        #{inStockNum,jdbcType=INTEGER},
       </if>
       <if test="inStockSum != null">
-        #{inStockSum,jdbcType=VARCHAR},
+        #{inStockSum,jdbcType=INTEGER},
       </if>
       <if test="inStockStart != null">
         #{inStockStart,jdbcType=VARCHAR},
@@ -193,14 +201,17 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
       </if>
+      <if test="record.inStockId != null">
+        in_stock_id = #{record.inStockId,jdbcType=INTEGER},
+      </if>
       <if test="record.inStockName != null">
         in_stock_name = #{record.inStockName,jdbcType=VARCHAR},
       </if>
       <if test="record.inStockNum != null">
-        in_stock_num = #{record.inStockNum,jdbcType=VARCHAR},
+        in_stock_num = #{record.inStockNum,jdbcType=INTEGER},
       </if>
       <if test="record.inStockSum != null">
-        in_stock_sum = #{record.inStockSum,jdbcType=VARCHAR},
+        in_stock_sum = #{record.inStockSum,jdbcType=INTEGER},
       </if>
       <if test="record.inStockStart != null">
         in_stock_start = #{record.inStockStart,jdbcType=VARCHAR},
@@ -217,6 +228,9 @@
       <if test="record.ticketInStockState != null">
         ticket_in_stock_state = #{record.ticketInStockState,jdbcType=VARCHAR},
       </if>
+      <if test="record.inStockContent != null">
+        in_stock_content = #{record.inStockContent,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -225,14 +239,16 @@
   <update id="updateByExample" parameterType="map">
     update ticket_in_stock
     set id = #{record.id,jdbcType=INTEGER},
+      in_stock_id = #{record.inStockId,jdbcType=INTEGER},
       in_stock_name = #{record.inStockName,jdbcType=VARCHAR},
-      in_stock_num = #{record.inStockNum,jdbcType=VARCHAR},
-      in_stock_sum = #{record.inStockSum,jdbcType=VARCHAR},
+      in_stock_num = #{record.inStockNum,jdbcType=INTEGER},
+      in_stock_sum = #{record.inStockSum,jdbcType=INTEGER},
       in_stock_start = #{record.inStockStart,jdbcType=VARCHAR},
       in_stock_end = #{record.inStockEnd,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP},
-      ticket_in_stock_state = #{record.ticketInStockState,jdbcType=VARCHAR}
+      ticket_in_stock_state = #{record.ticketInStockState,jdbcType=VARCHAR},
+      in_stock_content = #{record.inStockContent,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -240,14 +256,17 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.haoyukeji.tms.entity.TicketInStock">
     update ticket_in_stock
     <set>
+      <if test="inStockId != null">
+        in_stock_id = #{inStockId,jdbcType=INTEGER},
+      </if>
       <if test="inStockName != null">
         in_stock_name = #{inStockName,jdbcType=VARCHAR},
       </if>
       <if test="inStockNum != null">
-        in_stock_num = #{inStockNum,jdbcType=VARCHAR},
+        in_stock_num = #{inStockNum,jdbcType=INTEGER},
       </if>
       <if test="inStockSum != null">
-        in_stock_sum = #{inStockSum,jdbcType=VARCHAR},
+        in_stock_sum = #{inStockSum,jdbcType=INTEGER},
       </if>
       <if test="inStockStart != null">
         in_stock_start = #{inStockStart,jdbcType=VARCHAR},
@@ -264,19 +283,24 @@
       <if test="ticketInStockState != null">
         ticket_in_stock_state = #{ticketInStockState,jdbcType=VARCHAR},
       </if>
+      <if test="inStockContent != null">
+        in_stock_content = #{inStockContent,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.haoyukeji.tms.entity.TicketInStock">
     update ticket_in_stock
-    set in_stock_name = #{inStockName,jdbcType=VARCHAR},
-      in_stock_num = #{inStockNum,jdbcType=VARCHAR},
-      in_stock_sum = #{inStockSum,jdbcType=VARCHAR},
+    set in_stock_id = #{inStockId,jdbcType=INTEGER},
+      in_stock_name = #{inStockName,jdbcType=VARCHAR},
+      in_stock_num = #{inStockNum,jdbcType=INTEGER},
+      in_stock_sum = #{inStockSum,jdbcType=INTEGER},
       in_stock_start = #{inStockStart,jdbcType=VARCHAR},
       in_stock_end = #{inStockEnd,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
-      ticket_in_stock_state = #{ticketInStockState,jdbcType=VARCHAR}
+      ticket_in_stock_state = #{ticketInStockState,jdbcType=VARCHAR},
+      in_stock_content = #{inStockContent,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

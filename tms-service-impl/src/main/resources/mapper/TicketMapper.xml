@@ -108,6 +108,14 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
+  <delete id="batchDeleteById">
+      delete from tickets
+      where id in (
+      <foreach collection="idList" item="id" separator=",">
+        #{id}
+      </foreach>
+      )
+  </delete>
   <insert id="insert" parameterType="com.haoyukeji.tms.entity.Ticket">
     insert into ticket (id, state, ticket_num, 
       ticket_sum, ticket_in_time, ticket_state, 
@@ -227,23 +235,23 @@
     count(case when ticket_state = '已挂失' then 1 end) AS lost_num,
     count(case when ticket_state = '已过期' then 1 end) AS outtime_num
     FROM
-    tickets
+    ticket
   </select>
   <select id="findByBeginNumAndEndNum" resultType="com.haoyukeji.tms.entity.Ticket">
     SELECT
-    *
+      *
     FROM
-    tickets
+      ticket
     WHERE
-    ticket_num >= CONVERT(#{beginNum},UNSIGNED INT)
+      ticket_num >= CONVERT(#{beginNum},UNSIGNED INT)
     AND
-    ticket_num &lt;= CONVERT(#{endNum},UNSIGNED INT);
+      ticket_num &lt;= CONVERT(#{endNum},UNSIGNED INT)
   </select>
   <select id="findByBeginNumAndEndNumAndState" resultType="com.haoyukeji.tms.entity.Ticket">
     SELECT
     *
     FROM
-    tickets
+    ticket
     WHERE
     ticket_num >= CONVERT(#{beginNum},UNSIGNED INT)
     AND
@@ -259,7 +267,7 @@
     count(case when ticket_state = '已挂失' then 1 end) AS lost_num,
     count(case when ticket_state = '已过期' then 1 end) AS outtime_num
     FROM
-    tickets
+    ticket
     where store_account_id = #{storeAccountId}
   </select>
   <update id="updateByExampleSelective" parameterType="map">
