@@ -11,27 +11,41 @@
                 <img src="/static/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>首页</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
-        <!-- 搜索框search form -->
-        <%--<form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search...">
-                <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-            </div>
-        </form>--%>
-        <!-- /.search form -->
+
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">系统功能</li>
+            <li class="header">库存管理</li>
+            <li class="${param.menu == 'ticket_store' ? 'active' : ''}">
+                <a href="/ticket/store">
+                    <i class="fa fa-circle-o"></i> <span>年票入库</span>
+                    <span class="pull-right-container">
+                          <small class="label pull-right bg-aqua">★</small>
+                        </span>
+                </a>
+            </li>
+            <li class="${param.menu == 'ticket_out' ? 'active' : ''}">
+                <a href="/ticket/out">
+                    <i class="fa fa-circle-o"></i> <span>年票下发</span>
+                    <span class="pull-right-container">
+                          <small class="label pull-right bg-black">★</small>
+                        </span>
+                </a>
+            </li>
             <li class="${param.menu == 'ticket_store' ? 'active' : ''}">
                 <a href="/store">
-                    <i class="fa fa-circle-o"></i> <span>售票点信息</span>
+                    <i class="fa fa-circle-o"></i> <span>年票作废</span>
+                    <span class="pull-right-container">
+                          <small class="label pull-right bg-black">★</small>
+                        </span>
+                </a>
+            </li>
+            <li class="${param.menu == 'ticket_store' ? 'active' : ''}">
+                <a href="/store">
+                    <i class="fa fa-circle-o"></i> <span>盘点统计</span>
                     <span class="pull-right-container">
                           <small class="label pull-right bg-black">★</small>
                         </span>
@@ -39,10 +53,10 @@
             </li>
         </ul>
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">系统管理</li>
-            <li class="${param.menu == 'manager_account' ? 'active' : ''}">
-                <a href="/manager/account">
-                    <i class="fa fa-circle-o"></i> <span>账号管理</span>
+            <li class="header">结算系统</li>
+            <li class="${param.menu == 'finance_ticket' ? 'active' : ''}">
+                <a href="/finance/ticket">
+                    <i class="fa fa-circle-o"></i> <span>售票点缴费</span>
                     <span class="pull-right-container">
                           <small class="label pull-right bg-yellow">★</small>
                      </span>
@@ -50,7 +64,7 @@
             </li>
             <li class="${param.menu == 'manager_role' ? 'active' : ''}">
                 <a href="/manager/role">
-                    <i class="fa fa-circle-o"></i> <span>角色管理</span>
+                    <i class="fa fa-circle-o"></i> <span>景区结算</span>
                     <span class="pull-right-container">
                       <small class="label pull-right bg-green">★</small>
                     </span>
@@ -58,7 +72,15 @@
             </li>
             <li class="${param.menu == 'manager_permission' ? 'active' : ''}">
                 <a href="/manager/permission">
-                    <i class="fa fa-circle-o"></i> <span>权限管理</span>
+                    <i class="fa fa-circle-o"></i> <span>销售统计</span>
+                    <span class="pull-right-container">
+                      <small class="label pull-right bg-red">★</small>
+                    </span>
+                </a>
+            </li>
+            <li class="${param.menu == 'manager_permission' ? 'active' : ''}">
+                <a href="/manager/permission">
+                    <i class="fa fa-circle-o"></i> <span>验票统计</span>
                     <span class="pull-right-container">
                       <small class="label pull-right bg-red">★</small>
                     </span>

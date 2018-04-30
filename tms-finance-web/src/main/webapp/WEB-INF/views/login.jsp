@@ -48,7 +48,7 @@
 <body class="hold-transition login-page" style="background: url(/static/dist/img/jb1.jpg)">
 <div class="login-box">
     <div class="login-logo ddd">
-        <a href="/"><img src="/static/dist/img/kc.png" alt="title"></a>
+        <a href="/"><img src="/static/dist/img/kc1.png" alt="title"></a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body dd">

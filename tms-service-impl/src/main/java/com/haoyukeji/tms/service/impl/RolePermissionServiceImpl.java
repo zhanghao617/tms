@@ -11,6 +11,7 @@ import com.haoyukeji.tms.service.RolePermissionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -175,7 +176,11 @@ public class RolePermissionServiceImpl implements RolePermissionService {
             permissionsHasRoleKey.setRoleId(role.getId());
             permissionsHasRoleKey.setPermissionsId(perId);
 
-            permissionsHasRoleMapper.insertSelective(permissionsHasRoleKey);
+            try {
+                permissionsHasRoleMapper.insertSelective(permissionsHasRoleKey);
+            }catch (DuplicateKeyException ex) {
+                throw new DuplicateKeyException("权限重复，请重试");
+            }
         }
         role.setUpdateTime(new Date());
        roleMapper.updateByPrimaryKeySelective(role);

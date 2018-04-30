@@ -7,6 +7,8 @@ import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.util.SavedRequest;
 import org.apache.shiro.web.util.WebUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +22,8 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 public class LoginController {
+
+    private Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
     private AccountService accountService;
@@ -54,13 +58,19 @@ public class LoginController {
         try {
             subject.login(usernamePasswordToken);
 
-            //登录后跳转目标的判断
-            SavedRequest savedRequest = WebUtils.getSavedRequest(request);
-            String url = "/home";
-            if (savedRequest != null) {
-                url = savedRequest.getRequestUrl();
+            if (subject.hasRole("finance") || subject.hasRole("store")) {
+                //登录后跳转目标的判断
+                SavedRequest savedRequest = WebUtils.getSavedRequest(request);
+                String url = "/home";
+                if (savedRequest != null) {
+                    url = savedRequest.getRequestUrl();
+                }
+                return "redirect:" + url;
+            } else {
+                logger.info(" {} 权限不足，登陆失败", accountMobile);
+                redirectAttributes.addFlashAttribute("message","权限不足，请申请权限后登录");
             }
-            return "redirect:" + url;
+
         }catch (UnknownAccountException | IncorrectCredentialsException ex) {
             ex.printStackTrace();
             redirectAttributes.addFlashAttribute("message","账号或密码错误");
@@ -73,17 +83,6 @@ public class LoginController {
         }
         return "redirect:/";
     }
-        /*String accountIP = request.getLocalAddr();
-        try{
-            Account account = accountService.login(accountMobile,accountPassword,accountIP);
-            //将登陆对象存入session
-            session.setAttribute("current_Account",account);
-            return "redirect:/home";
-        }catch (ServiceException ex) {
-            redirectAttributes.addFlashAttribute("phone",accountMobile);
-            redirectAttributes.addFlashAttribute("message",ex.getMessage());
-            return "redirect:/";
-        }*/
 
     /**
      * 登陆成功后跳转的页面
@@ -93,14 +92,6 @@ public class LoginController {
         return "/home";
     }
 
-    /*@GetMapping("/logout")
-    public String logout(RedirectAttributes redirectAttributes) {
-        Subject subject = SecurityUtils.getSubject();
-        subject.logout();
-
-        redirectAttributes.addFlashAttribute("message","你已安全退出");
-        return "redirect:/";
-    }*/
 
     @GetMapping("/401")
     public String unauthorizedUrl() {

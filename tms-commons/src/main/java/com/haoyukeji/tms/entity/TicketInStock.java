@@ -7,22 +7,27 @@ import java.util.Date;
  * @author 
  */
 public class TicketInStock implements Serializable {
+
     private Integer id;
+    /**
+     * 入库人ID
+     */
+    private Integer inStockId;
 
     /**
-     * 入库人
+     * 入库人姓名
      */
-    private String inStockName;
+    private String  inStockName;
 
     /**
      * 入库数量
      */
-    private String inStockNum;
+    private Integer inStockNum;
 
     /**
      * 总数量
      */
-    private String inStockSum;
+    private Integer inStockSum;
 
     /**
      * 入库开始票号
@@ -43,6 +48,11 @@ public class TicketInStock implements Serializable {
      */
     private String ticketInStockState;
 
+    /**
+     * 入库记录
+     */
+    private String inStockContent;
+
     private static final long serialVersionUID = 1L;
 
     public Integer getId() {
@@ -53,6 +63,14 @@ public class TicketInStock implements Serializable {
         this.id = id;
     }
 
+    public Integer getInStockId() {
+        return inStockId;
+    }
+
+    public void setInStockId(Integer inStockId) {
+        this.inStockId = inStockId;
+    }
+
     public String getInStockName() {
         return inStockName;
     }
@@ -61,19 +79,19 @@ public class TicketInStock implements Serializable {
         this.inStockName = inStockName;
     }
 
-    public String getInStockNum() {
+    public Integer getInStockNum() {
         return inStockNum;
     }
 
-    public void setInStockNum(String inStockNum) {
+    public void setInStockNum(Integer inStockNum) {
         this.inStockNum = inStockNum;
     }
 
-    public String getInStockSum() {
+    public Integer getInStockSum() {
         return inStockSum;
     }
 
-    public void setInStockSum(String inStockSum) {
+    public void setInStockSum(int inStockSum) {
         this.inStockSum = inStockSum;
     }
 
@@ -115,5 +133,30 @@ public class TicketInStock implements Serializable {
 
     public void setTicketInStockState(String ticketInStockState) {
         this.ticketInStockState = ticketInStockState;
+    }
+
+    public String getInStockContent() {
+        return inStockContent;
+    }
+
+    public void setInStockContent(String inStockContent) {
+        this.inStockContent = inStockContent;
+    }
+
+    @Override
+    public String toString() {
+        return "TicketInStock{" +
+                "id=" + id +
+                ", inStockId=" + inStockId +
+                ", inStockName='" + inStockName + '\'' +
+                ", inStockNum=" + inStockNum +
+                ", inStockSum=" + inStockSum +
+                ", inStockStart='" + inStockStart + '\'' +
+                ", inStockEnd='" + inStockEnd + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", ticketInStockState='" + ticketInStockState + '\'' +
+                ", inStockContent='" + inStockContent + '\'' +
+                '}';
     }
 }

@@ -205,11 +205,62 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.haoyukeji.tms.entity.TicketExample" resultType="java.lang.Long">
-    select count(*) from ticket
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
+    <insert id="batchInsert">
+      insert into ticket (ticket_num, ticket_in_time,ticket_state, create_time)
+      values
+      <foreach collection="ticketList" item="ticket" separator=",">
+        (#{ticket.ticketNum},#{ticket.ticketInTime},#{ticket.ticketState},#{ticket.createTime})
+      </foreach>
+    </insert>
+    <select id="countByExample" parameterType="com.haoyukeji.tms.entity.TicketExample" resultType="java.lang.Long">
+      select count(*) from ticket
+      <if test="_parameter != null">
+        <include refid="Example_Where_Clause" />
+      </if>
+    </select>
+  <select id="countByState" resultType="java.util.Map">
+    SELECT
+    count(*) as total,
+    count(case when ticket_state = '已入库' then 1 end) AS in_num,
+    count(case when ticket_state = '已下发' then 1 end) AS out_num,
+    count(case when ticket_state = '已销售' then 1 end) AS sale_num,
+    count(case when ticket_state = '已挂失' then 1 end) AS lost_num,
+    count(case when ticket_state = '已过期' then 1 end) AS outtime_num
+    FROM
+    tickets
+  </select>
+  <select id="findByBeginNumAndEndNum" resultType="com.haoyukeji.tms.entity.Ticket">
+    SELECT
+    *
+    FROM
+    tickets
+    WHERE
+    ticket_num >= CONVERT(#{beginNum},UNSIGNED INT)
+    AND
+    ticket_num &lt;= CONVERT(#{endNum},UNSIGNED INT);
+  </select>
+  <select id="findByBeginNumAndEndNumAndState" resultType="com.haoyukeji.tms.entity.Ticket">
+    SELECT
+    *
+    FROM
+    tickets
+    WHERE
+    ticket_num >= CONVERT(#{beginNum},UNSIGNED INT)
+    AND
+    ticket_num &lt;= CONVERT(#{endNum},UNSIGNED INT)
+    AND
+    ticket_state = #{state}
+  </select>
+  <select id="countByStateAndStoreAccountId" resultType="java.util.Map">
+    SELECT
+    count(*) as total,
+    count(case when ticket_state = '已下发' then 1 end) AS out_num,
+    count(case when ticket_state = '已销售' then 1 end) AS sale_num,
+    count(case when ticket_state = '已挂失' then 1 end) AS lost_num,
+    count(case when ticket_state = '已过期' then 1 end) AS outtime_num
+    FROM
+    tickets
+    where store_account_id = #{storeAccountId}
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     update ticket

@@ -144,6 +144,9 @@
       <if test="ticketInStockState != null">
         ticket_in_stock_state,
       </if>
+      <if test="inStockContent != null">
+        in_stock_content,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -172,6 +175,9 @@
       </if>
       <if test="ticketInStockState != null">
         #{ticketInStockState,jdbcType=VARCHAR},
+      </if>
+      <if test="inStockContent != null">
+        #{inStockContent,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>

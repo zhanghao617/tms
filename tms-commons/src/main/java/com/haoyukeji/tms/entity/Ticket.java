@@ -7,6 +7,14 @@ import java.util.Date;
  * @author 
  */
 public class Ticket implements Serializable {
+
+    public static final String TICKET_IN_STORE = "已入库";
+    public static final String TICKET_ISSUED = "已下发";
+    public static final String TICKET_SOLD = "已销售";
+    public static final String TICKET_LOST = "已挂失";
+    public static final String TICKET_INVALID = "已作废";
+    public static final String TICKET_OVERDUE = "已逾期";
+
     private Integer id;
 
     private String state;

@@ -1,9 +1,12 @@
 com\haoyukeji\tms\mapper\TicketInStockMapper.class
 com\haoyukeji\tms\mapper\AccountLoginLogMapper.class
+com\haoyukeji\tms\service\impl\TicketServiceImpl.class
 com\haoyukeji\tms\mapper\PermissionsHasRoleMapper.class
 com\haoyukeji\tms\fileStore\QiniuStore.class
 com\haoyukeji\tms\mapper\StoreAccountMapper.class
+com\haoyukeji\tms\mapper\TicketOutStoreMapper.class
 com\haoyukeji\tms\mapper\StoreAccountLogMapper.class
+com\haoyukeji\tms\util\ShiroUtil.class
 com\haoyukeji\tms\mapper\AccountMapper.class
 com\haoyukeji\tms\service\impl\StoreServiceImpl.class
 com\haoyukeji\tms\service\impl\RolePermissionServiceImpl.class
