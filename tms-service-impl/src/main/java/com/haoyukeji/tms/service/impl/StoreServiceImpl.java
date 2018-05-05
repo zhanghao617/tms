@@ -1,10 +1,8 @@
 package com.haoyukeji.tms.service.impl;
 
-import com.haoyukeji.tms.entity.Store;
-import com.haoyukeji.tms.entity.StoreAccount;
-import com.haoyukeji.tms.entity.StoreAccountExample;
-import com.haoyukeji.tms.entity.StoreExample;
+import com.haoyukeji.tms.entity.*;
 import com.haoyukeji.tms.exception.ServiceException;
+import com.haoyukeji.tms.mapper.StoreAccountLogMapper;
 import com.haoyukeji.tms.mapper.StoreAccountMapper;
 import com.haoyukeji.tms.mapper.StoreMapper;
 import com.haoyukeji.tms.service.StoreService;
@@ -23,6 +21,8 @@ public class StoreServiceImpl implements StoreService {
     private StoreMapper storeMapper;
     @Autowired
     private StoreAccountMapper storeAccountMapper;
+    @Autowired
+    private StoreAccountLogMapper storeAccountLogMapper;
 
     /**
      * 添加新的销售点
@@ -105,5 +105,44 @@ public class StoreServiceImpl implements StoreService {
             storeAccountMapper.deleteByPrimaryKey(id);
         }
         storeMapper.deleteByPrimaryKey(id);
+    }
+
+    /**
+     * 根据手机号查询登陆对象
+     *
+     * @param userMobile
+     * @return
+     */
+    @Override
+    public StoreAccount findStoreAccountByName(String userMobile) {
+        StoreAccountExample example = new StoreAccountExample();
+        example.createCriteria().andStoreAccountMobileEqualTo(userMobile);
+
+        List<StoreAccount> storeAccountList = storeAccountMapper.selectByExample(example);
+        if(storeAccountList != null && !storeAccountList.isEmpty()) {
+            return storeAccountList.get(0);
+        }
+        return null;
+    }
+
+    /**
+     * 根据ID售票点账户Id查询售票点信息
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Store findAStoreById(Integer id) {
+        return storeMapper.selectByPrimaryKey(id);
+    }
+
+    /**
+     * 登陆日志
+     *
+     * @param storeAccountLog
+     */
+    @Override
+    public void saveAccountLoginLog(StoreAccountLog storeAccountLog) {
+        storeAccountLogMapper.insertSelective(storeAccountLog);
     }
 }

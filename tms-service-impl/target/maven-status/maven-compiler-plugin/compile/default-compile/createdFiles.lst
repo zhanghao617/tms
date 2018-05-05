@@ -6,6 +6,7 @@ com\haoyukeji\tms\fileStore\QiniuStore.class
 com\haoyukeji\tms\mapper\StoreAccountMapper.class
 com\haoyukeji\tms\mapper\TicketOutStoreMapper.class
 com\haoyukeji\tms\mapper\StoreAccountLogMapper.class
+com\haoyukeji\tms\mapper\CustomerMapper.class
 com\haoyukeji\tms\util\ShiroUtil.class
 com\haoyukeji\tms\mapper\AccountMapper.class
 com\haoyukeji\tms\service\impl\StoreServiceImpl.class

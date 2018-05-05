@@ -1,6 +1,8 @@
 package com.haoyukeji.tms.service;
 
 import com.haoyukeji.tms.entity.Store;
+import com.haoyukeji.tms.entity.StoreAccount;
+import com.haoyukeji.tms.entity.StoreAccountLog;
 
 import java.util.List;
 
@@ -34,4 +36,24 @@ public interface StoreService {
      * @param id
      */
     void delStoreWithAccountById(Integer id);
+
+    /**
+     * 根据手机号查询登陆对象
+     * @param userMobile
+     * @return
+     */
+    StoreAccount findStoreAccountByName(String userMobile);
+
+    /**
+     * 根据ID售票点账户Id查询售票点信息
+     * @param id
+     * @return
+     */
+    Store findAStoreById(Integer id);
+
+    /**
+     * 登陆日志
+     * @param storeAccountLog
+     */
+    void saveAccountLoginLog(StoreAccountLog storeAccountLog);
 }

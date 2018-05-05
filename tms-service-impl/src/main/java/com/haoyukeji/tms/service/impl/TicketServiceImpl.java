@@ -1,5 +1,8 @@
 package com.haoyukeji.tms.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.github.pagehelper.util.StringUtil;
 import com.haoyukeji.tms.entity.*;
 import com.haoyukeji.tms.exception.ServiceException;
 import com.haoyukeji.tms.mapper.StoreMapper;
@@ -8,6 +11,7 @@ import com.haoyukeji.tms.mapper.TicketMapper;
 import com.haoyukeji.tms.mapper.TicketOutStoreMapper;
 import com.haoyukeji.tms.service.TicketService;
 import com.haoyukeji.tms.util.ShiroUtil;
+import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -200,4 +204,71 @@ public class TicketServiceImpl implements TicketService {
     public Map<String, Long> countTicketByState() {
         return ticketMapper.countByState();
     }
+
+    /**
+     * 根据下发售票点ID查询出库对象
+     * @param id
+     * @return
+     */
+    @Override
+    public TicketOutStore findTicketOutStoreById(Integer id) {
+        return ticketOutStoreMapper.selectByPrimaryKey(id);
+    }
+
+    /**
+     * @param pageNo
+     * @param queryParam
+     * @return
+     */
+    @Override
+    public PageInfo<TicketOutStore> findTicketOutStoreByPageNoAndQueryParam(Integer pageNo, Map<String, Object> queryParam) {
+        PageHelper.startPage(pageNo,15);
+
+        TicketOutStoreExample ticketOutStoreExample = new TicketOutStoreExample();
+        TicketOutStoreExample.Criteria criteria = ticketOutStoreExample.createCriteria();
+
+        String state = (String) queryParam.get("state");
+        if (StringUtil.isNotEmpty(state)) {
+            criteria.andStateEqualTo(state);
+        }
+        ticketOutStoreExample.setOrderByClause("id DESC");
+
+        List<TicketOutStore> ticketOutStores = ticketOutStoreMapper.selectByExample(ticketOutStoreExample);
+        return new PageInfo<>(ticketOutStores);
+
+    }
+
+    /**
+     * 完成支付
+     * @param id
+     * @param payType
+     */
+    @Override
+    @Transactional(rollbackFor = RuntimeException.class)
+    public void saveTicketFinance(Integer id, String payType) {
+        TicketOutStore ticketOutStore = ticketOutStoreMapper.selectByPrimaryKey(id);
+        if (ticketOutStore != null && TicketOutStore.STATE_NO_PAY.equals(ticketOutStore.getState())) {
+            ticketOutStore.setPayType(payType);
+            //获取当前登录对象
+            Account account = shiroUtil.getAccount();
+            ticketOutStore.setFinanceAccountId(account.getId());
+            ticketOutStore.setFinanceAccountName(account.getAccountName());
+            ticketOutStore.setState(TicketOutStore.STATE_PAY);
+
+            //修改下发记录
+            ticketOutStoreMapper.updateByPrimaryKeySelective(ticketOutStore);
+            //修改年票状态
+            List<Ticket> ticketList = ticketMapper.findByBeginNumAndEndNum(ticketOutStore.getBeginTicketNum(),ticketOutStore.getEndTicketNum());
+            for (Ticket ticket : ticketList) {
+                ticket.setTicketState(Ticket.TICKET_ISSUED);
+                ticket.setStoreAccountId(ticketOutStore.getStoreAccountId());
+                ticket.setTicketOnTime(DateTime.now().toString("YYYY-MM-dd"));
+                ticket.setUpdateTime(new Date());
+
+                ticketMapper.updateByPrimaryKeySelective(ticket);
+            }
+        }
+    }
+
+
 }

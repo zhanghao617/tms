@@ -46,7 +46,7 @@ public class Ticket implements Serializable {
     /**
      * 下发时间
      */
-    private Date ticketOnTime;
+    private String ticketOnTime;
 
     /**
      * 年票办理时间
@@ -128,11 +128,11 @@ public class Ticket implements Serializable {
         this.updateTime = updateTime;
     }
 
-    public Date getTicketOnTime() {
+    public String getTicketOnTime() {
         return ticketOnTime;
     }
 
-    public void setTicketOnTime(Date ticketOnTime) {
+    public void setTicketOnTime(String ticketOnTime) {
         this.ticketOnTime = ticketOnTime;
     }
 

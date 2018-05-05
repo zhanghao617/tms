@@ -1,3 +1,4 @@
+com\haoyukeji\tms\entity\CustomerExample$Criterion.class
 com\haoyukeji\tms\entity\StoreAccountLogExample.class
 com\haoyukeji\tms\entity\PermissionsHasRoleKey.class
 com\haoyukeji\tms\entity\PermissionsExample$Criterion.class
@@ -6,8 +7,10 @@ com\haoyukeji\tms\entity\StoreAccountLogExample$Criterion.class
 com\haoyukeji\tms\entity\StoreExample$GeneratedCriteria.class
 com\haoyukeji\tms\entity\RoleHasAccountExample.class
 com\haoyukeji\tms\entity\StoreAccountExample.class
+com\haoyukeji\tms\entity\Customer.class
 com\haoyukeji\tms\entity\AccountExample.class
 com\haoyukeji\tms\entity\AccountExample$Criterion.class
+com\haoyukeji\tms\entity\CustomerExample$Criteria.class
 com\haoyukeji\tms\entity\PermissionsExample$GeneratedCriteria.class
 com\haoyukeji\tms\entity\TicketInStockExample.class
 com\haoyukeji\tms\entity\AccountLoginLogExample$Criteria.class
@@ -32,12 +35,14 @@ com\haoyukeji\tms\entity\StoreAccountLog.class
 com\haoyukeji\tms\entity\AccountLoginLogExample.class
 com\haoyukeji\tms\entity\RoleHasAccountExample$Criterion.class
 com\haoyukeji\tms\entity\StoreExample.class
+com\haoyukeji\tms\entity\CustomerExample.class
 com\haoyukeji\tms\entity\RoleExample$Criteria.class
 com\haoyukeji\tms\entity\TicketInStockExample$Criteria.class
 com\haoyukeji\tms\dto\ResponseBean.class
 com\haoyukeji\tms\entity\RoleHasAccountExample$Criteria.class
 com\haoyukeji\tms\entity\TicketOutStore.class
 com\haoyukeji\tms\entity\StoreExample$Criterion.class
+com\haoyukeji\tms\entity\CustomerExample$GeneratedCriteria.class
 com\haoyukeji\tms\entity\AccountLoginLogExample$Criterion.class
 com\haoyukeji\tms\entity\Ticket.class
 com\haoyukeji\tms\entity\StoreAccountExample$GeneratedCriteria.class

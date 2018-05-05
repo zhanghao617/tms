@@ -1,5 +1,6 @@
 package com.haoyukeji.tms.service;
 
+import com.github.pagehelper.PageInfo;
 import com.haoyukeji.tms.entity.TicketInStock;
 import com.haoyukeji.tms.entity.TicketOutStore;
 import com.haoyukeji.tms.exception.ServiceException;
@@ -51,4 +52,25 @@ public interface TicketService {
      */
     Map<String,Long> countTicketByState();
 
+    /**
+     * 根据下发售票点ID查询出库对象
+     * @param id
+     * @return
+     */
+    TicketOutStore findTicketOutStoreById(Integer id);
+
+    /**
+     *
+     * @param pageNo
+     * @param queryParam
+     * @return
+     */
+    PageInfo<TicketOutStore> findTicketOutStoreByPageNoAndQueryParam(Integer pageNo, Map<String, Object> queryParam);
+
+    /**
+     * 完成支付
+     * @param id
+     * @param payType
+     */
+    void saveTicketFinance(Integer id, String payType);
 }

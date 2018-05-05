@@ -54,8 +54,8 @@
         </ul>
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">结算系统</li>
-            <li class="${param.menu == 'finance_ticket' ? 'active' : ''}">
-                <a href="/finance/ticket">
+            <li class="${param.menu == 'finance' ? 'active' : ''}">
+                <a href="/finance">
                     <i class="fa fa-circle-o"></i> <span>售票点缴费</span>
                     <span class="pull-right-container">
                           <small class="label pull-right bg-yellow">★</small>

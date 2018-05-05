@@ -361,7 +361,7 @@
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
       <if test="ticketOnTime != null">
-        ticket_on_time = #{ticketOnTime,jdbcType=TIMESTAMP},
+        ticket_on_time = #{ticketOnTime,jdbcType=VARCHAR},
       </if>
       <if test="ticketStartTime != null">
         ticket_start_time = #{ticketStartTime,jdbcType=TIMESTAMP},
